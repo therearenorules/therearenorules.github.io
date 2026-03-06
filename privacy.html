@@ -3,151 +3,407 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>개인정보 처리방침 - 타로 타이머</title>
+    <title>타로 타이머 - 개인정보 처리방침 v1.3.0</title>
+    <meta name="description" content="타로 타이머 개인정보 처리방침 - Anonymous Auth, Card History, Supabase 기반 자동 백업 시스템 포함">
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
-            background: #fff;
+        }
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
         h1 {
             color: #7b2cbf;
-            border-bottom: 2px solid #f4d03f;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            border-bottom: 4px solid #f4d03f;
+            padding-bottom: 15px;
+            font-size: 2.2em;
         }
         h2 {
-            color: #7b2cbf;
-            margin-top: 30px;
-            margin-bottom: 15px;
+            color: #5a1d8b;
+            margin-top: 40px;
+            font-size: 1.6em;
+            border-left: 4px solid #f4d03f;
+            padding-left: 15px;
         }
         h3 {
-            color: #5a1e8f;
-            margin-top: 20px;
+            color: #7b2cbf;
+            margin-top: 25px;
+            font-size: 1.3em;
         }
-        .platform {
-            background: #f5f5f5;
+        .update-notice {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .update-notice h3 {
+            color: #f4d03f;
+            margin-top: 0;
+        }
+        .security-badge {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
             padding: 15px;
-            border-radius: 8px;
             margin: 15px 0;
-            border-left: 4px solid #7b2cbf;
+            border-radius: 5px;
         }
-        .last-updated {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 30px;
+        .warning-badge {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .contact {
+            background: #f8f5ff;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 40px;
+            border: 2px solid #d4b8ff;
         }
         ul {
-            margin: 10px 0;
-            padding-left: 20px;
+            line-height: 2;
         }
         li {
-            margin: 8px 0;
+            margin-bottom: 10px;
         }
-        a {
+        .version-info {
+            text-align: right;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+        strong {
             color: #7b2cbf;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <h1>개인정보 처리방침</h1>
-    <p class="last-updated">최종 업데이트: 2025년 1월 19일</p>
+    <div class="container">
+        <h1>🔮 타로 타이머 - 개인정보 처리방침</h1>
 
-    <p>타로 타이머("회사", "당사", "우리")는 사용자의 개인정보를 소중히 여기며, 관련 법령에 따라 개인정보를 보호하고 있습니다. 본 개인정보 처리방침은 타로 타이머 앱 서비스("서비스") 이용 시 수집, 사용, 보관되는 정보에 대해 설명합니다.</p>
+        <div class="version-info">
+            <p><strong>최종 업데이트:</strong> 2026년 2월 3일</p>
+            <p><strong>버전:</strong> 1.3.0</p>
+            <p><strong>시행일자:</strong> 2026년 2월 3일</p>
+        </div>
 
-    <h2>1. 수집하는 정보</h2>
-    <p>타로 타이머는 다음과 같은 정보를 수집합니다:</p>
-    <ul>
-        <li><strong>기기 정보:</strong> 기기 식별자, 운영체제 버전, 앱 버전</li>
-        <li><strong>타로 리딩 기록:</strong> 사용자가 생성한 타로 카드 리딩 및 메모 (로컬 저장만)</li>
-        <li><strong>사용 통계:</strong> 앱 사용 패턴, 기능 사용 빈도 (익명화)</li>
-        <li><strong>구독 정보:</strong> 구독 상태 및 만료일 (플랫폼 제공)</li>
-    </ul>
+        <div class="update-notice">
+            <h3>✨ v1.3.0 주요 업데이트 내역</h3>
+            <ul>
+                <li>✅ <strong>Anonymous Auth 추가:</strong> 로그인 없이 자동 데이터 백업/복구 지원</li>
+                <li>✅ <strong>Card History 기능:</strong> 타로 카드 학습 기록 저장 및 분석</li>
+                <li>✅ <strong>Keychain 저장:</strong> 앱 삭제 후에도 데이터 복구를 위한 기기 식별자 저장</li>
+                <li>✅ <strong>Device ID 수집:</strong> 익명 사용자 식별을 위한 랜덤 생성 UUID 사용</li>
+            </ul>
+        </div>
 
-    <h2>2. 정보 사용 목적</h2>
-    <p>수집된 정보는 다음 목적으로 사용됩니다:</p>
-    <ul>
-        <li>서비스 제공 및 유지관리</li>
-        <li>사용자 경험 개선 및 맞춤형 기능 제공</li>
-        <li>기술 지원 및 문제 해결</li>
-        <li>서비스 사용 통계 분석 (익명화)</li>
-        <li>법적 의무 준수</li>
-    </ul>
+        <div class="update-notice" style="background: linear-gradient(135deg, #4a90a4 0%, #357a8a 100%); margin-top: 10px;">
+            <h3>📋 v1.2.0 업데이트 내역 (2026-01-29)</h3>
+            <ul>
+                <li>✅ Sign in with Apple 로그인 지원 추가</li>
+                <li>✅ Apple 정책 준수를 위한 서버 간 알림 엔드포인트 등록</li>
+            </ul>
+        </div>
 
-    <h2>3. 정보 공유 및 제3자 제공</h2>
-    <p>당사는 사용자의 개인정보를 제3자에게 판매하거나 임대하지 않습니다. 다음의 경우에만 정보가 공유될 수 있습니다:</p>
-    <ul>
-        <li><strong>법적 요구:</strong> 법원 명령, 법적 절차, 정부 요청에 따른 공개</li>
-        <li><strong>서비스 제공업체:</strong> 앱 호스팅, 분석 서비스 제공업체 (익명화된 정보만)</li>
-    </ul>
+        <h2>1. 개인정보처리방침 개요</h2>
+        <p>타로 타이머는 타로 카드 공부를 위한 앱으로, 사용자의 개인정보 보호를 최우선으로 합니다.</p>
 
-    <h2>4. 결제 및 구독 정보</h2>
+        <div class="security-badge">
+            <h3>🔒 개인정보 보호 우선 설계</h3>
+            <ul>
+                <li><strong>로컬 전용 저장:</strong> 모든 타로 기록과 데이터는 사용자 기기에만 저장됩니다</li>
+                <li><strong>최소한의 데이터 수집:</strong> 앱 기능 제공에 필요한 최소한의 정보만 수집합니다</li>
+                <li><strong>개인정보 미수집:</strong> 이름, 이메일 등 개인 식별 정보를 수집하지 않습니다</li>
+                <li><strong>서버 측 보안:</strong> 결제 영수증 검증은 서버에서만 수행하여 보안 강화</li>
+            </ul>
+        </div>
 
-    <div class="platform">
-        <h3>📱 iOS (App Store)</h3>
+        <h2>2. 수집하는 정보</h2>
+
+        <h3>2.1 로컬 저장 데이터 (기기에만 저장)</h3>
         <ul>
-            <li>결제는 <strong>Apple iTunes</strong>를 통해 처리됩니다</li>
-            <li>결제 정보(신용카드, 결제 내역)는 Apple이 관리하며, <strong>당사는 수집하거나 저장하지 않습니다</strong></li>
-            <li>구독 상태 정보만 Apple로부터 수신하여 서비스 제공에 사용합니다</li>
-            <li>구독 관리: iOS 설정 > [사용자 이름] > 구독</li>
-            <li>Apple 개인정보 처리방침: <a href="https://www.apple.com/kr/privacy/" target="_blank">https://www.apple.com/kr/privacy/</a></li>
+            <li><strong>타로 기록:</strong> 뽑은 카드, 메모, 시간 기록 등</li>
+            <li><strong>일기 내용:</strong> 사용자가 작성한 타로 일기</li>
+            <li><strong>앱 설정:</strong> 언어, 테마, 알림 설정 등</li>
         </ul>
-    </div>
 
-    <div class="platform">
-        <h3>🤖 Android (Google Play)</h3>
+        <h3>2.2 ✨ NEW 구독 관리 데이터 (Supabase 서버 저장)</h3>
         <ul>
-            <li>결제는 <strong>Google Play</strong>를 통해 처리됩니다</li>
-            <li>결제 정보(신용카드, 결제 내역)는 Google이 관리하며, <strong>당사는 수집하거나 저장하지 않습니다</strong></li>
-            <li>구독 상태 정보만 Google로부터 수신하여 서비스 제공에 사용합니다</li>
-            <li>구독 관리: Google Play 스토어 > 메뉴 > 구독</li>
-            <li>Google 개인정보 처리방침: <a href="https://policies.google.com/privacy?hl=ko" target="_blank">https://policies.google.com/privacy</a></li>
+            <li><strong>구독 상태:</strong> 유료 구독 활성화 여부, 구독 유형 (월간/연간)</li>
+            <li><strong>구독 기록:</strong> 구매 일시, 만료 일시, 갱신 내역</li>
+            <li><strong>결제 영수증:</strong> Apple/Google 영수증 정보 (암호화 저장)</li>
+            <li><strong>거래 ID:</strong> 앱스토어 트랜잭션 ID (환불/복원 처리용)</li>
+            <li><strong>사용자 ID:</strong> 앱 내부 고유 식별자 (UUID, 개인정보 아님)</li>
+            <li><strong>플랫폼 정보:</strong> iOS/Android 구분, 환경 (Sandbox/Production)</li>
         </ul>
+
+        <div class="security-badge">
+            <h3>🔐 보안 조치</h3>
+            <ul>
+                <li>모든 구독 데이터는 <strong>행 레벨 보안 (RLS)</strong> 적용</li>
+                <li>사용자는 <strong>본인의 구독 정보만 조회 가능</strong></li>
+                <li>결제 영수증은 <strong>AES-256 암호화</strong> 저장</li>
+                <li>신용카드 정보는 <strong>절대 저장하지 않음</strong> (Apple/Google이 처리)</li>
+            </ul>
+        </div>
+
+        <div class="warning-badge">
+            <h3>📱 멀티 디바이스 동기화</h3>
+            <ul>
+                <li>동일 계정으로 로그인한 모든 기기에서 구독 상태 동기화</li>
+                <li>새 기기에서도 구독 복원 가능</li>
+                <li>구독 취소/환불 시 모든 기기에서 자동 반영</li>
+            </ul>
+        </div>
+
+        <h3>2.3 ✨ NEW Sign in with Apple 데이터</h3>
+        <ul>
+            <li><strong>Apple ID 로그인:</strong> Apple 계정을 통한 간편 로그인 지원</li>
+            <li><strong>수집 정보:</strong> Apple에서 제공하는 사용자 식별자 (고유 ID)</li>
+            <li><strong>이메일:</strong> 사용자가 공유를 선택한 경우에만 (숨김 이메일 옵션 지원)</li>
+            <li><strong>이름:</strong> 사용자가 공유를 선택한 경우에만</li>
+        </ul>
+
+        <div class="security-badge">
+            <h3>🍎 Apple 로그인 개인정보 보호</h3>
+            <ul>
+                <li><strong>최소 정보 수집:</strong> 앱 기능에 필요한 최소한의 정보만 요청</li>
+                <li><strong>이메일 숨기기 지원:</strong> Apple의 Private Email Relay 서비스 지원</li>
+                <li><strong>데이터 삭제:</strong> 사용자 요청 시 Apple ID 연결 및 관련 데이터 완전 삭제</li>
+                <li><strong>서버 알림:</strong> Apple Server-to-Server 알림으로 계정 상태 변경 실시간 반영</li>
+            </ul>
+        </div>
+
+        <h3>2.4 ✨ NEW 익명 인증 데이터 (Anonymous Auth)</h3>
+        <ul>
+            <li><strong>익명 사용자 ID:</strong> 로그인 없이 생성되는 고유 식별자 (UUID)</li>
+            <li><strong>기기 식별자:</strong> 앱 삭제 후 데이터 복구를 위한 랜덤 생성 UUID</li>
+            <li><strong>저장 위치:</strong> Supabase 서버 + 기기 Keychain (iOS) / SecureStore (Android)</li>
+            <li><strong>목적:</strong> 로그인 없이 자동 데이터 백업 및 복구</li>
+        </ul>
+
+        <div class="security-badge">
+            <h3>🔐 익명 인증 보안</h3>
+            <ul>
+                <li><strong>개인정보 미수집:</strong> 이름, 이메일, 전화번호 등 개인정보를 수집하지 않음</li>
+                <li><strong>익명성 보장:</strong> 생성된 UUID로는 개인을 식별할 수 없음</li>
+                <li><strong>Keychain 저장:</strong> iOS Keychain에 기기 ID 안전하게 저장</li>
+                <li><strong>데이터 복구:</strong> 앱 삭제 후 재설치 시 기존 데이터 자동 복구</li>
+            </ul>
+        </div>
+
+        <h3>2.5 ✨ NEW 카드 기록 데이터 (Card History)</h3>
+        <ul>
+            <li><strong>뽑은 카드:</strong> 카드 ID, 카드 이름, 정방향/역방향 여부</li>
+            <li><strong>시간 정보:</strong> 카드를 뽑은 날짜 및 시간</li>
+            <li><strong>메모:</strong> 사용자가 작성한 카드 해석 메모</li>
+            <li><strong>학습 통계:</strong> 카드별 출현 빈도, 학습 진행률</li>
+        </ul>
+
+        <div class="warning-badge">
+            <h3>📊 카드 기록 데이터 활용</h3>
+            <ul>
+                <li><strong>학습 분석:</strong> 자주 뽑는 카드, 학습 패턴 분석</li>
+                <li><strong>통계 제공:</strong> 개인화된 학습 통계 및 리포트</li>
+                <li><strong>저장 기간:</strong> 사용자 삭제 요청 시까지 보관</li>
+                <li><strong>삭제 방법:</strong> 설정 → 개인정보 관리 → 학습 기록 삭제</li>
+            </ul>
+        </div>
+
+        <h3>2.6 익명 통계 (선택적)</h3>
+        <ul>
+            <li><strong>사용 통계:</strong> 앱 사용 빈도 (개인 식별 불가)</li>
+            <li><strong>오류 로그:</strong> 앱 개선을 위한 익명 오류 정보</li>
+            <li><strong>광고 ID:</strong> 광고 표시용 (설정에서 제한 가능)</li>
+        </ul>
+
+        <h3>2.7 수집하지 않는 정보</h3>
+        <ul>
+            <li>❌ <strong>개인 식별 정보:</strong> 이름, 이메일, 전화번호</li>
+            <li>❌ <strong>위치 정보:</strong> GPS 또는 정확한 위치 데이터</li>
+            <li>❌ <strong>연락처:</strong> 주소록 또는 연락처 정보</li>
+            <li>❌ <strong>민감 정보:</strong> 종교, 정치적 성향 등</li>
+            <li>❌ <strong>신용카드 정보:</strong> 카드번호, CVV, 유효기간 등 (Apple/Google이 처리)</li>
+        </ul>
+
+        <h2>3. 정보 사용 목적</h2>
+
+        <h3>3.1 필수 기능 제공</h3>
+        <ul>
+            <li>24시간 타로 타이머 서비스 제공</li>
+            <li>개인화된 타로 카드 추천</li>
+            <li>사용량 제한 관리 (무료/프리미엄 사용자)</li>
+            <li>앱 설정 및 환경설정 저장</li>
+            <li>✨ <strong>NEW</strong> 구독 관리 및 결제 영수증 검증</li>
+            <li>✨ <strong>NEW</strong> 멀티 디바이스 구독 동기화</li>
+            <li>✨ <strong>NEW</strong> 구매 복원 및 환불 처리</li>
+        </ul>
+
+        <h3>3.2 서비스 개선</h3>
+        <ul>
+            <li>앱 성능 최적화 및 오류 수정</li>
+            <li>새로운 기능 개발 및 사용자 경험 개선</li>
+            <li>고객 지원 및 문의 응답</li>
+        </ul>
+
+        <h2>4. 정보 저장 및 보안</h2>
+
+        <h3>4.1 로컬 저장 (기본)</h3>
+        <ul>
+            <li><strong>저장 위치:</strong> 사용자 기기의 안전한 로컬 스토리지</li>
+            <li><strong>암호화:</strong> 민감한 데이터는 기기 내 암호화 저장</li>
+            <li><strong>접근 제한:</strong> 타로 타이머 앱만 접근 가능</li>
+            <li><strong>동기화:</strong> 사용자가 활성화한 경우에만 클라우드 동기화</li>
+        </ul>
+
+        <h3>4.2 ✨ NEW Keychain/SecureStore 저장</h3>
+        <div class="security-badge">
+            <ul>
+                <li><strong>iOS Keychain:</strong> 기기 식별자(Device ID)를 iOS Keychain에 안전하게 저장</li>
+                <li><strong>Android SecureStore:</strong> Android의 보안 저장소에 기기 식별자 저장</li>
+                <li><strong>목적:</strong> 앱 삭제 후 재설치 시 기존 데이터 복구</li>
+                <li><strong>보존 기간:</strong> 기기 초기화 전까지 유지</li>
+                <li><strong>삭제 방법:</strong> 앱 설정 → 개인정보 관리 → 기기 식별자 삭제</li>
+            </ul>
+        </div>
+
+        <h3>4.3 구독 및 백업 데이터 클라우드 저장 (Supabase)</h3>
+        <div class="security-badge">
+            <ul>
+                <li><strong>제공업체:</strong> Supabase (PostgreSQL 기반, 엔터프라이즈급 보안)</li>
+                <li><strong>저장 위치:</strong> AWS 서울 리전 (대한민국 데이터센터)</li>
+                <li><strong>암호화:</strong> 전송 시 TLS 1.3, 저장 시 AES-256 암호화</li>
+                <li><strong>접근 제어:</strong> 행 레벨 보안 (RLS)으로 사용자별 격리</li>
+                <li><strong>백업:</strong> 자동 백업 (1시간 간격) 및 재해 복구 계획</li>
+                <li><strong>보안 인증:</strong> SOC 2 Type II, ISO 27001 인증</li>
+            </ul>
+        </div>
+
+        <div class="warning-badge">
+            <h3>🔐 영수증 검증 보안 강화</h3>
+            <ul>
+                <li><strong>서버 측 검증:</strong> 모든 결제 영수증은 Supabase Edge Function에서만 검증</li>
+                <li><strong>비밀키 보호:</strong> Apple Shared Secret은 서버에만 저장 (클라이언트 노출 차단)</li>
+                <li><strong>재검증 시스템:</strong> 주기적 영수증 재검증으로 구독 상태 정확성 보장</li>
+                <li><strong>부정 방지:</strong> 조작된 영수증 자동 탐지 및 차단</li>
+            </ul>
+        </div>
+
+        <h2>5. 정보 공유</h2>
+
+        <h3>5.1 제3자 공유 원칙</h3>
+        <p>타로 타이머는 다음의 경우를 제외하고는 사용자의 정보를 제3자와 공유하지 않습니다:</p>
+
+        <h3>5.2 서비스 제공업체</h3>
+        <ul>
+            <li><strong>광고 플랫폼:</strong> Google AdMob (광고 표시용)</li>
+            <li><strong>결제 처리:</strong> Apple App Store, Google Play Store</li>
+            <li>✨ <strong>NEW 구독 관리:</strong> Supabase (구독 데이터 저장 및 동기화)</li>
+            <li>✨ <strong>NEW 영수증 검증:</strong> Supabase Edge Functions (서버 측 영수증 검증)</li>
+            <li><strong>분석 서비스:</strong> 익명화된 사용 통계만</li>
+        </ul>
+
+        <div class="security-badge">
+            <h3>🔒 Supabase 데이터 처리 세부사항</h3>
+            <ul>
+                <li><strong>처리 목적:</strong> 구독 상태 관리, 멀티 디바이스 동기화, 영수증 검증</li>
+                <li><strong>처리 데이터:</strong> 구독 정보, 결제 영수증 (암호화), 거래 ID</li>
+                <li><strong>보관 기간:</strong> 구독 종료 후 5년 (세법 및 소비자 보호법 준수)</li>
+                <li><strong>삭제 요청:</strong> 설정 → 개인정보 관리 → 구독 데이터 삭제</li>
+                <li><strong>제3자 제공:</strong> Supabase는 사용자 데이터를 제3자에게 제공하지 않음</li>
+            </ul>
+        </div>
+
+        <h2>6. 사용자 권리</h2>
+
+        <h3>6.1 정보 접근권</h3>
+        <ul>
+            <li>저장된 개인정보 내용 확인 요청</li>
+            <li>정보 처리 현황 및 목적 확인</li>
+        </ul>
+
+        <h3>6.2 정보 수정·삭제권</h3>
+        <ul>
+            <li>부정확한 정보의 수정 요청</li>
+            <li>개인정보 삭제 요청 (탈퇴 시)</li>
+            <li>로컬 데이터는 앱 삭제 시 자동 제거</li>
+            <li>✨ <strong>NEW</strong> 구독 데이터 삭제 요청 (설정 → 개인정보 관리)</li>
+        </ul>
+
+        <h3>6.3 처리 중단 요청권</h3>
+        <ul>
+            <li>개인정보 처리 중단 요청</li>
+            <li>마케팅 목적 사용 거부</li>
+        </ul>
+
+        <h3>6.4 권리 행사 방법</h3>
+        <ul>
+            <li><strong>이메일:</strong> changsekwon@gmail.com</li>
+            <li><strong>앱 내:</strong> 설정 → 개인정보 관리</li>
+            <li><strong>응답 기간:</strong> 요청일로부터 10일 이내</li>
+        </ul>
+
+        <h2>7. 정책 변경</h2>
+
+        <h3>7.1 변경 통지</h3>
+        <ul>
+            <li><strong>사전 통지:</strong> 변경 30일 전 앱 내 공지</li>
+            <li><strong>중요 변경:</strong> 팝업 알림 및 이메일 통지</li>
+            <li><strong>동의 절차:</strong> 중요 변경 시 재동의 절차</li>
+        </ul>
+
+        <h3>7.2 변경 내역 관리</h3>
+        <ul>
+            <li>모든 변경 내역 보관 및 공개</li>
+            <li>이전 버전 정책 아카이브 제공</li>
+            <li>변경 사유 및 내용 명시</li>
+        </ul>
+
+        <div class="contact">
+            <h2>8. 문의 및 신고</h2>
+
+            <h3>8.1 개인정보 보호책임자</h3>
+            <p><strong>이름:</strong> 타로 타이머 개인정보보호팀</p>
+            <p><strong>이메일:</strong> changsekwon@gmail.com</p>
+            <p><strong>지원 이메일:</strong> changsekwon@gmail.com</p>
+
+            <h3>8.2 신고 및 상담 기관</h3>
+            <ul>
+                <li><strong>개인정보보호위원회:</strong> privacy.go.kr (국번없이 182)</li>
+                <li><strong>개인정보 침해신고센터:</strong> privacy.or.kr (국번없이 182)</li>
+                <li><strong>대검찰청 사이버수사과:</strong> spo.go.kr (국번없이 1301)</li>
+            </ul>
+        </div>
+
+        <hr style="margin: 40px 0; border: 0; border-top: 2px solid #eee;">
+
+        <div style="text-align: center; padding: 30px 0;">
+            <p style="font-size: 1.3em; color: #7b2cbf;">
+                💜 타로 타이머와 함께하는 신비로운 여정에서<br>
+                귀하의 개인정보를 안전하게 보호하겠습니다.
+            </p>
+            <p style="margin-top: 20px;">
+                <strong>문의사항이 있으시면 언제든지 연락주세요.</strong><br>
+                📧 <strong>이메일:</strong> changsekwon@gmail.com<br>
+                🌐 <strong>웹사이트:</strong> https://tarottimer.app
+            </p>
+        </div>
+
+        <div class="version-info">
+            <p><strong>문서 버전:</strong> 1.3.0</p>
+            <p><strong>마지막 검토일:</strong> 2026년 2월 3일</p>
+        </div>
     </div>
-
-    <h2>5. 데이터 보안</h2>
-    <p>당사는 사용자 정보를 보호하기 위해 다음과 같은 조치를 취합니다:</p>
-    <ul>
-        <li><strong>로컬 저장:</strong> 타로 리딩 데이터는 사용자의 기기에만 저장되며, 외부 서버로 전송되지 않습니다</li>
-        <li><strong>암호화:</strong> 전송되는 데이터는 암호화됩니다</li>
-        <li><strong>접근 제한:</strong> 내부 시스템 접근은 엄격히 제한됩니다</li>
-    </ul>
-
-    <h2>6. 사용자 권리</h2>
-    <p>사용자는 다음과 같은 권리를 가집니다:</p>
-    <ul>
-        <li><strong>열람 및 정정:</strong> 앱 내 설정에서 저장된 데이터를 확인하고 수정할 수 있습니다</li>
-        <li><strong>삭제:</strong> 앱을 삭제하면 로컬에 저장된 모든 데이터가 함께 삭제됩니다</li>
-        <li><strong>동의 철회:</strong> 앱 사용을 중단하여 정보 수집에 대한 동의를 철회할 수 있습니다</li>
-    </ul>
-
-    <h2>7. 아동 개인정보 보호</h2>
-    <p>본 서비스는 만 13세 미만 아동을 대상으로 하지 않으며, 의도적으로 아동의 개인정보를 수집하지 않습니다. 만약 아동의 정보가 수집된 것을 발견하면 즉시 삭제 조치합니다.</p>
-
-    <h2>8. 개인정보 처리방침 변경</h2>
-    <p>본 방침은 필요에 따라 변경될 수 있으며, 중요한 변경 사항은 앱 내 공지를 통해 알려드립니다. 변경된 방침은 공지 후 7일 뒤부터 효력이 발생합니다.</p>
-
-    <h2>9. 연락처</h2>
-    <p>개인정보 관련 문의사항이나 권리 행사 요청은 아래 연락처로 문의해주세요:</p>
-    <ul>
-        <li>이메일: <a href="mailto:privacy@tarottimer.com">privacy@tarottimer.com</a></li>
-        <li>개인정보 보호책임자: 타로 타이머 운영팀</li>
-    </ul>
-
-    <h2>10. 준거법</h2>
-    <p>본 개인정보 처리방침은 대한민국 법률에 따라 해석되고 적용됩니다.</p>
-
-    <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-    <p style="text-align: center; color: #999; font-size: 0.85em;">
-        타로 타이머 © 2025. All rights reserved.
-    </p>
 </body>
 </html>
