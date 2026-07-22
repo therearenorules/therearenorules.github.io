@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarot Timer | Hourly Tarot Card Learning App</title>
+  <meta name="description" content="Tarot Timer helps you learn all 78 tarot card meanings one hour at a time, with notes, spreads, reminders, and a tarot diary on iOS and Android.">
+  <meta name="keywords" content="tarot timer, tarot card app, learn tarot, tarot card meanings, daily tarot, tarot journal, tarot diary, tarot spreads, 78 tarot cards">
+  <meta name="author" content="Tarot Timer">
+  <meta name="theme-color" content="#080809">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="apple-itunes-app" content="app-id=6752687014">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="apple-touch-icon" href="../assets/icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tarot Timer">
+  <meta property="og:title" content="Tarot Timer — Learn Tarot Cards One Hour at a Time">
+  <meta property="og:description" content="Hourly tarot cards, meanings, notes, spreads, reminders, and a diary in one app.">
+  <meta property="og:url" content="https://tarotimerhomepage.vercel.app/en/">
+  <meta property="og:image" content="https://tarotimerhomepage.vercel.app/assets/captures/app-home.png">
+  <meta property="og:image:width" content="1206">
+  <meta property="og:image:height" content="2622">
+  <meta property="og:image:alt" content="The hourly tarot card screen in the Tarot Timer app">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ko_KR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Tarot Timer — Hourly Tarot Card Learning App">
+  <meta name="twitter:description" content="Learn tarot meanings through hourly cards, notes, spreads, reminders, and a personal diary.">
+  <meta name="twitter:image" content="https://tarotimerhomepage.vercel.app/assets/icon.png">
+  <meta name="twitter:image:alt" content="Tarot Timer app icon">
+  <meta property="al:ios:app_store_id" content="6752687014">
+  <meta property="al:ios:app_name" content="Tarot Timer">
+  <meta property="al:android:package" content="com.tarottimer.app">
+  <meta property="al:android:app_name" content="Tarot Timer">
+  <link rel="canonical" href="https://tarotimerhomepage.vercel.app/en/">
+  <link rel="alternate" hreflang="ko" href="https://tarotimerhomepage.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://tarotimerhomepage.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://tarotimerhomepage.vercel.app/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Tarot Timer",
+    "alternateName": ["Tarot Card Timer", "타로 타이머", "타로타이머"],
+    "url": "https://tarotimerhomepage.vercel.app/en/",
+    "description": "An hourly tarot card learning app for studying all 78 card meanings and keeping notes, spreads, reminders, and a tarot diary.",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "iOS, Android",
+    "image": "https://tarotimerhomepage.vercel.app/assets/icon.png",
+    "screenshot": "https://tarotimerhomepage.vercel.app/assets/captures/app-home.png",
+    "featureList": [
+      "Hourly tarot cards across a 24-hour timer",
+      "Meanings for all 78 tarot cards",
+      "Tarot notes and diary",
+      "One-card and multi-card spreads",
+      "Korean, English, and Japanese support"
+    ],
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "url": "https://play.google.com/store/apps/details?id=com.tarottimer.app"
+    },
+    "sameAs": [
+      "https://apps.apple.com/us/app/tarot-timer/id6752687014",
+      "https://play.google.com/store/apps/details?id=com.tarottimer.app"
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #080809;
+      --panel: #111114;
+      --paper: #f2efe7;
+      --muted: #a9a69f;
+      --gold: #f0c94d;
+      --violet: #8f61c7;
+      --line: rgba(242, 239, 231, 0.14);
+      --serif: "Instrument Serif", Georgia, serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      background:
+        radial-gradient(circle at 80% 12%, rgba(143, 97, 199, 0.23), transparent 34rem),
+        var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    header { border-bottom: 1px solid var(--line); }
+    nav { min-height: 70px; display: flex; align-items: center; gap: 20px; }
+    .brand { font: 24px/1 var(--serif); text-decoration: none; }
+    .lang { margin-left: auto; color: var(--muted); font: 12px/1 var(--mono); text-transform: uppercase; }
+    .hero { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 72px; align-items: center; padding: 96px 0; }
+    .eyebrow { color: var(--gold); font: 12px/1.4 var(--mono); letter-spacing: 0.12em; text-transform: uppercase; }
+    h1 { margin: 18px 0 22px; font: clamp(64px, 9vw, 118px)/0.86 var(--serif); letter-spacing: -0.035em; }
+    .lead { max-width: 700px; margin: 0; color: #d2cfc8; font-size: clamp(19px, 2.2vw, 28px); }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .button { padding: 13px 18px; border: 1px solid var(--line); text-decoration: none; font-weight: 700; }
+    .button.primary { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+    .phone { width: min(100%, 330px); margin: auto; padding: 12px; border: 1px solid var(--line); background: var(--panel); transform: rotate(2deg); }
+    .phone img { aspect-ratio: 1206 / 2622; object-fit: cover; }
+    section.content { padding: 80px 0; border-top: 1px solid var(--line); }
+    h2 { margin: 0 0 24px; font: clamp(42px, 6vw, 72px)/0.95 var(--serif); }
+    .intro { max-width: 780px; color: var(--muted); font-size: 19px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 44px; background: var(--line); border: 1px solid var(--line); }
+    article { min-height: 230px; padding: 34px; background: var(--panel); }
+    article span { color: var(--violet); font: 12px/1 var(--mono); }
+    h3 { margin: 34px 0 10px; font-size: 23px; }
+    article p { margin: 0; color: var(--muted); }
+    .faq { display: grid; gap: 14px; margin-top: 36px; }
+    details { padding: 22px 24px; border: 1px solid var(--line); background: var(--panel); }
+    summary { cursor: pointer; font-weight: 700; }
+    details p { color: var(--muted); }
+    footer { padding: 34px 0; border-top: 1px solid var(--line); color: var(--muted); }
+    .footer { display: flex; flex-wrap: wrap; gap: 18px; }
+    .footer span { margin-left: auto; }
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 70px 0; }
+      .phone { width: 240px; }
+      .grid { grid-template-columns: 1fr; }
+      .footer span { width: 100%; margin-left: 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Primary navigation">
+      <a class="brand" href="./">Tarot Timer</a>
+      <a class="lang" href="../" hreflang="ko">한국어</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow">24-hour tarot learning · iOS + Android</p>
+        <h1>Tarot<br>Timer</h1>
+        <p class="lead">Learn tarot card meanings through the hour you are living—then keep your notes, spreads, and tarot diary connected in one place.</p>
+        <div class="actions">
+          <a class="button primary" href="https://apps.apple.com/us/app/tarot-timer/id6752687014">Download on the App Store</a>
+          <a class="button" href="https://play.google.com/store/apps/details?id=com.tarottimer.app&amp;hl=en">Get it on Google Play</a>
+        </div>
+      </div>
+      <figure class="phone">
+        <img src="../assets/captures/app-home.webp" width="1206" height="2622" alt="Tarot Timer showing the tarot card assigned to the current hour">
+      </figure>
+    </div>
+
+    <section class="content">
+      <div class="wrap">
+        <p class="eyebrow">What makes it different</p>
+        <h2>One hour.<br>One card. A lasting practice.</h2>
+        <p class="intro">Tarot Timer is a tarot card learning app built around a 24-hour rhythm. Instead of trying to memorize all 78 cards at once, you meet a card in context, read its meaning, and connect it to your own day.</p>
+        <div class="grid">
+          <article><span>01 · HOURLY CARDS</span><h3>A 24-hour tarot timer</h3><p>Meet a new card each hour and receive optional reminders without losing the rhythm of your day.</p></article>
+          <article><span>02 · CARD MEANINGS</span><h3>Learn all 78 tarot cards</h3><p>Study Major and Minor Arcana meanings, symbols, keywords, and upright or reversed interpretations.</p></article>
+          <article><span>03 · TAROT SPREADS</span><h3>Read questions in context</h3><p>Use one-card and multi-card tarot spreads, then save the question, positions, cards, and interpretation together.</p></article>
+          <article><span>04 · TAROT DIARY</span><h3>Turn readings into a record</h3><p>Keep hourly notes and diary entries so repeated cards, emotions, and personal patterns become easier to notice.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="wrap">
+        <p class="eyebrow">Frequently asked questions</p>
+        <h2>Before you begin.</h2>
+        <div class="faq">
+          <details><summary>Is Tarot Timer suitable for beginners?</summary><p>Yes. Card meanings and keywords are included, so you can learn tarot one card and one lived example at a time.</p></details>
+          <details><summary>Is this a daily tarot or fortune-telling app?</summary><p>It can support personal reflection, but its main purpose is tarot education: learning card meanings through hourly repetition, notes, spreads, and review.</p></details>
+          <details><summary>Does the app include all 78 tarot cards?</summary><p>Yes. Tarot Timer includes the 22 Major Arcana and 56 Minor Arcana cards.</p></details>
+          <details><summary>Where can I download Tarot Timer?</summary><p>Tarot Timer is available on the Apple App Store and Google Play for iOS and Android.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer">
+      <a href="https://therearenorules.github.io/privacy.html">Privacy Policy</a>
+      <a href="https://therearenorules.github.io/terms.html">Terms</a>
+      <a href="https://therearenorules.github.io/support.html">Support</a>
+      <span>© 2026 Tarot Timer</span>
+    </div>
+  </footer>
+</body>
+</html>

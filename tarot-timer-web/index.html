@@ -1,0 +1,2875 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>타로 타이머 (Tarot Timer) | 24시간 타로카드 학습 앱</title>
+  <meta name="description" content="타로 타이머(Tarot Timer)는 매시간 한 장씩 78장 타로카드 의미를 배우고, 오늘의 타로 메모·스프레드·타로 일기를 기록하는 iOS·Android 앱입니다.">
+  <meta name="keywords" content="타로타이머, 타로 타이머, Tarot Timer, 타로카드 앱, 오늘의 타로, 타로 공부, 타로카드 의미, 타로 일기, 타로 스프레드, 78장 타로카드">
+  <meta name="author" content="Tarot Timer">
+  <meta name="theme-color" content="#080809">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="apple-itunes-app" content="app-id=6752687014">
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link rel="apple-touch-icon" href="./assets/icon.png">
+  <link rel="manifest" href="./site.webmanifest">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="타로 타이머 · Tarot Timer">
+  <meta property="og:title" content="타로 타이머 (Tarot Timer) — 24시간 타로카드 학습 앱">
+  <meta property="og:description" content="매시간 한 장의 타로카드부터 카드 의미, 메모, 스프레드, 타로 일기까지 한 흐름으로 기록하세요.">
+  <meta property="og:url" content="https://tarotimerhomepage.vercel.app/">
+  <meta property="og:image" content="https://tarotimerhomepage.vercel.app/assets/captures/app-home.png">
+  <meta property="og:image:width" content="1206">
+  <meta property="og:image:height" content="2622">
+  <meta property="og:image:alt" content="24시간 타로 타이머 앱의 시간별 타로카드 화면">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="타로 타이머 (Tarot Timer) — 24시간 타로카드 학습 앱">
+  <meta name="twitter:description" content="시간별 카드, 타로카드 의미, 메모, 스프레드와 타로 일기를 한 앱에서 기록하세요.">
+  <meta name="twitter:image" content="https://tarotimerhomepage.vercel.app/assets/icon.png">
+  <meta name="twitter:image:alt" content="타로 타이머 앱 아이콘">
+  <meta property="al:ios:app_store_id" content="6752687014">
+  <meta property="al:ios:app_name" content="Tarot Timer">
+  <meta property="al:android:package" content="com.tarottimer.app">
+  <meta property="al:android:app_name" content="Tarot Timer">
+  <link rel="canonical" href="https://tarotimerhomepage.vercel.app/">
+  <link rel="alternate" hreflang="ko" href="https://tarotimerhomepage.vercel.app/">
+  <link rel="alternate" hreflang="en" href="https://tarotimerhomepage.vercel.app/en/">
+  <link rel="alternate" hreflang="x-default" href="https://tarotimerhomepage.vercel.app/">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://tarotimerhomepage.vercel.app/#website",
+        "url": "https://tarotimerhomepage.vercel.app/",
+        "name": "타로 타이머",
+        "alternateName": ["Tarot Timer", "타로타이머"],
+        "inLanguage": ["ko-KR", "en"]
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://tarotimerhomepage.vercel.app/#app",
+        "name": "Tarot Timer",
+        "alternateName": ["타로 타이머", "타로타이머"],
+        "url": "https://tarotimerhomepage.vercel.app/",
+        "description": "매시간 한 장씩 78장 타로카드 의미를 배우고 메모, 스프레드와 타로 일기를 기록하는 24시간 타로 타이머 앱입니다.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, Android",
+        "image": "https://tarotimerhomepage.vercel.app/assets/icon.png",
+        "screenshot": "https://tarotimerhomepage.vercel.app/assets/captures/app-home.png",
+        "featureList": [
+          "24시간 시간별 타로카드",
+          "78장 타로카드 의미 학습",
+          "타로 메모와 다이어리",
+          "원 카드와 다중 카드 스프레드",
+          "한국어, 영어, 일본어 지원"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW",
+          "url": "https://play.google.com/store/apps/details?id=com.tarottimer.app"
+        },
+        "sameAs": [
+          "https://apps.apple.com/kr/app/tarot-timer/id6752687014",
+          "https://play.google.com/store/apps/details?id=com.tarottimer.app"
+        ],
+        "isPartOf": { "@id": "https://tarotimerhomepage.vercel.app/#website" }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=Noto+Serif+KR:wght@500;600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #080809;
+      --ink-2: #0e0e10;
+      --ink-3: #151518;
+      --paper: #f2efe7;
+      --paper-2: #d3d0c8;
+      --paper-3: #92918c;
+      --gold: #f0c94d;
+      --gold-soft: #d7b64b;
+      --mint: #69d6c5;
+      --coral: #ff665c;
+      --violet: #8f61c7;
+      --line: rgba(242, 239, 231, 0.13);
+      --line-strong: rgba(242, 239, 231, 0.24);
+      --display: "Instrument Serif", "Noto Serif KR", Georgia, serif;
+      --sans: "Pretendard Variable", Pretendard, ui-sans-serif, system-ui, -apple-system, "Apple SD Gothic Neo", sans-serif;
+      --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+      --max: 1400px;
+      --nav-h: 68px;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--nav-h) + 24px);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      overflow-x: hidden;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.6;
+      letter-spacing: 0;
+      -webkit-tap-highlight-color: rgba(240, 201, 77, 0.18);
+    }
+
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea {
+      color: inherit;
+      font: inherit;
+    }
+
+    button,
+    a {
+      touch-action: manipulation;
+    }
+
+    button {
+      border: 0;
+      padding: 0;
+      background: none;
+      cursor: pointer;
+    }
+
+    img,
+    video,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    figure,
+    ul {
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      text-wrap: balance;
+      letter-spacing: 0;
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--mint);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -80px;
+      left: 16px;
+      z-index: 1000;
+      padding: 10px 14px;
+      background: var(--paper);
+      color: var(--ink);
+      font-weight: 700;
+      transition: top 180ms ease;
+    }
+
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 64px));
+      margin-inline: auto;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      inset: 0 auto auto 0;
+      z-index: 1001;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      pointer-events: none;
+    }
+
+    /* Navigation */
+    .site-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      height: calc(var(--nav-h) + env(safe-area-inset-top));
+      padding-top: env(safe-area-inset-top);
+      background: rgba(8, 8, 9, 0.9);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      width: min(var(--max), calc(100% - 32px));
+      height: var(--nav-h);
+      margin-inline: auto;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+      font-family: var(--display);
+      font-size: 21px;
+    }
+
+    .brand img {
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--line);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--paper-3);
+      text-transform: uppercase;
+    }
+
+    .nav-links a,
+    .footer-links a {
+      position: relative;
+      transition: color 160ms ease;
+    }
+
+    .nav-links a::after,
+    .footer-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 100%;
+      bottom: -5px;
+      height: 1px;
+      background: currentColor;
+      transition: right 220ms var(--ease-out);
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: var(--paper);
+    }
+
+    .nav-links a:hover::after,
+    .footer-links a:hover::after {
+      right: 0;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .lang-toggle {
+      display: flex;
+      border: 1px solid var(--line);
+    }
+
+    .lang-btn {
+      min-width: 42px;
+      min-height: 38px;
+      padding: 0 10px;
+      color: var(--paper-3);
+      font-family: var(--mono);
+      font-size: 10px;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .lang-btn + .lang-btn {
+      border-left: 1px solid var(--line);
+    }
+
+    .lang-btn.active {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .nav-cta,
+    .button-primary,
+    .button-secondary {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      font-size: 13px;
+      font-weight: 750;
+      transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    .nav-cta,
+    .button-primary {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .nav-cta:hover,
+    .button-primary:hover {
+      background: #ffdc68;
+      transform: translateY(-2px);
+    }
+
+    .nav-cta:active,
+    .button-primary:active,
+    .button-secondary:active {
+      transform: translateY(0) scale(0.985);
+    }
+
+    .button-secondary {
+      border-color: var(--line-strong);
+      color: var(--paper);
+      background: rgba(8, 8, 9, 0.44);
+    }
+
+    .button-secondary:hover {
+      border-color: var(--mint);
+      color: var(--mint);
+      transform: translateY(-2px);
+    }
+
+    .button-icon {
+      width: 17px;
+      height: 17px;
+      flex: 0 0 auto;
+    }
+
+    .menu-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+    }
+
+    .mobile-panel {
+      position: fixed;
+      top: calc(var(--nav-h) + env(safe-area-inset-top));
+      left: 0;
+      right: 0;
+      z-index: 99;
+      display: grid;
+      padding: 16px;
+      background: var(--ink);
+      border-bottom: 1px solid var(--line);
+      transform: translateY(-120%);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 280ms var(--ease-out), opacity 180ms ease;
+      overscroll-behavior: contain;
+    }
+
+    .mobile-panel.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .mobile-panel a {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--display);
+      font-size: 25px;
+    }
+
+    .mobile-panel a::after {
+      content: "↗";
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 14px;
+    }
+
+    /* Hero */
+    .capture-hero {
+      position: relative;
+      min-height: min(900px, 92svh);
+      padding-top: calc(var(--nav-h) + env(safe-area-inset-top));
+      overflow: hidden;
+      background: var(--ink);
+      border-bottom: 1px solid var(--line);
+      isolation: isolate;
+    }
+
+    .capture-hero::before,
+    .capture-hero::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .capture-hero::before {
+      top: calc(var(--nav-h) + 46px);
+      left: 4%;
+      right: 4%;
+      height: 1px;
+      background: var(--line);
+      box-shadow:
+        0 152px 0 var(--line),
+        0 304px 0 var(--line),
+        0 456px 0 var(--line),
+        0 608px 0 var(--line);
+      opacity: 0.48;
+    }
+
+    .capture-hero::after {
+      top: var(--nav-h);
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      background: var(--line);
+      box-shadow:
+        -25vw 0 0 var(--line),
+        25vw 0 0 var(--line);
+      opacity: 0.48;
+    }
+
+    .hero-copy {
+      position: absolute;
+      z-index: 5;
+      left: max(32px, calc((100vw - var(--max)) / 2));
+      top: 23%;
+      width: min(58vw, 760px);
+    }
+
+    .capture-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      font-family: var(--mono);
+      font-size: 10px;
+      line-height: 1;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--paper-2);
+    }
+
+    .capture-label::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--coral);
+      box-shadow: 0 0 0 5px rgba(255, 102, 92, 0.12);
+      animation: recordPulse 1.8s ease-in-out infinite;
+    }
+
+    @keyframes recordPulse {
+      50% {
+        opacity: 0.45;
+        transform: scale(0.76);
+      }
+    }
+
+    .hero-title {
+      font-family: var(--display);
+      font-size: clamp(6.6rem, 10.8vw, 10.8rem);
+      font-weight: 400;
+      line-height: 0.76;
+      white-space: nowrap;
+    }
+
+    .hero-tagline {
+      max-width: 610px;
+      margin-top: 34px;
+      font-family: var(--display);
+      font-size: clamp(2rem, 3.5vw, 4rem);
+      font-weight: 400;
+      line-height: 0.99;
+      color: var(--paper);
+    }
+
+    html[lang="ko"] .hero-tagline {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: clamp(1.9rem, 3vw, 3.25rem);
+      line-height: 1.15;
+      word-break: keep-all;
+    }
+
+    .hero-tagline em {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: inherit;
+    }
+
+    html[lang="ko"] .hero-tagline em {
+      font-style: normal;
+    }
+
+    .hero-summary {
+      width: min(480px, 92%);
+      margin-top: 24px;
+      color: var(--paper-2);
+      font-size: 15px;
+      line-height: 1.72;
+      text-wrap: pretty;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+
+    .hero-device {
+      position: absolute;
+      z-index: 3;
+      top: calc(var(--nav-h) + 26px);
+      bottom: 28px;
+      left: 69%;
+      aspect-ratio: 1206 / 2622;
+      transform: translateX(-50%) rotate(1.25deg);
+      overflow: hidden;
+      border: 1px solid rgba(240, 201, 77, 0.5);
+      border-radius: 44px;
+      background: #100b16;
+      box-shadow:
+        0 0 0 10px rgba(143, 97, 199, 0.04),
+        0 40px 120px rgba(0, 0, 0, 0.72);
+    }
+
+    .hero-device::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      z-index: 3;
+      border-radius: inherit;
+      border: 1px solid rgba(105, 214, 197, 0.24);
+      pointer-events: none;
+      animation: deviceFocus 4s ease-in-out infinite;
+    }
+
+    @keyframes deviceFocus {
+      50% {
+        border-color: rgba(240, 201, 77, 0.72);
+        box-shadow: inset 0 0 24px rgba(240, 201, 77, 0.08);
+      }
+    }
+
+    .hero-device video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #100b16;
+    }
+
+    .video-control {
+      position: absolute;
+      z-index: 6;
+      right: 18px;
+      bottom: 18px;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(242, 239, 231, 0.3);
+      background: rgba(8, 8, 9, 0.78);
+      color: var(--paper);
+      backdrop-filter: blur(10px);
+      transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+    }
+
+    .video-control:hover {
+      background: var(--paper);
+      color: var(--ink);
+      transform: translateY(-2px);
+    }
+
+    .video-control svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .video-control .icon-play,
+    .video-control.is-paused .icon-pause {
+      display: none;
+    }
+
+    .video-control.is-paused .icon-play {
+      display: block;
+    }
+
+    .hero-proof {
+      position: absolute;
+      z-index: 4;
+      left: max(32px, calc((100vw - var(--max)) / 2));
+      bottom: 34px;
+      display: grid;
+      grid-template-columns: repeat(3, max-content);
+      gap: 0;
+    }
+
+    .proof-item {
+      min-width: 138px;
+      padding-right: 28px;
+      margin-right: 28px;
+      border-right: 1px solid var(--line);
+    }
+
+    .proof-item:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      border-right: 0;
+    }
+
+    .proof-item strong {
+      display: block;
+      margin-bottom: 2px;
+      font-family: var(--display);
+      font-size: 25px;
+      font-weight: 400;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .proof-item span {
+      display: block;
+      color: var(--paper-3);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    .chapter-rail {
+      position: absolute;
+      z-index: 7;
+      top: 50%;
+      right: max(20px, calc((100vw - var(--max)) / 2));
+      width: 170px;
+      display: grid;
+      transform: translateY(-50%);
+      background: rgba(8, 8, 9, 0.62);
+      border: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+
+    .chapter-button {
+      position: relative;
+      min-height: 52px;
+      padding: 10px 14px 10px 36px;
+      border-bottom: 1px solid var(--line);
+      color: var(--paper-3);
+      text-align: left;
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    .chapter-button:last-child {
+      border-bottom: 0;
+    }
+
+    .chapter-button::before {
+      content: "";
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border: 1px solid currentColor;
+      transform: translateY(-50%);
+    }
+
+    .chapter-button:hover {
+      color: var(--paper);
+      background: rgba(242, 239, 231, 0.05);
+    }
+
+    .chapter-button.active {
+      color: var(--gold);
+      background: rgba(240, 201, 77, 0.08);
+    }
+
+    .chapter-button.active::before {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+
+    /* Evidence ribbon */
+    .evidence-ribbon {
+      min-height: 78px;
+      display: grid;
+      grid-template-columns: 1.35fr repeat(3, 1fr);
+      align-items: stretch;
+      background: var(--mint);
+      color: #07100f;
+      border-bottom: 1px solid #07100f;
+    }
+
+    .ribbon-cell {
+      display: flex;
+      align-items: center;
+      padding: 18px 28px;
+      border-right: 1px solid rgba(7, 16, 15, 0.22);
+    }
+
+    .ribbon-cell:last-child {
+      border-right: 0;
+    }
+
+    .ribbon-cell strong {
+      font-family: var(--display);
+      font-size: 23px;
+      font-weight: 400;
+    }
+
+    .ribbon-cell span {
+      font-family: var(--mono);
+      font-size: 9px;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    /* Shared section */
+    .section {
+      position: relative;
+      padding: 150px 0;
+      border-bottom: 1px solid var(--line);
+      content-visibility: auto;
+      contain-intrinsic-size: 900px;
+    }
+
+    .section-index {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      color: var(--mint);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .section-index::after {
+      content: "";
+      width: 42px;
+      height: 1px;
+      background: currentColor;
+    }
+
+    .section-title {
+      max-width: 900px;
+      font-family: var(--display);
+      font-size: clamp(3.6rem, 7vw, 7.8rem);
+      font-weight: 400;
+      line-height: 0.88;
+    }
+
+    html[lang="ko"] .section-title {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: clamp(3rem, 5.4vw, 6.25rem);
+      line-height: 1.03;
+      word-break: keep-all;
+    }
+
+    .section-title em {
+      color: var(--gold);
+      font-style: italic;
+      font-weight: inherit;
+    }
+
+    html[lang="ko"] .section-title em {
+      font-style: normal;
+    }
+
+    .section-lead {
+      max-width: 600px;
+      margin-top: 28px;
+      color: var(--paper-2);
+      font-size: 17px;
+      line-height: 1.75;
+      text-wrap: pretty;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 700ms var(--ease-out), transform 700ms var(--ease-out);
+    }
+
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Real flow */
+    .flow-intro {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      align-items: end;
+      gap: 80px;
+      margin-bottom: 110px;
+    }
+
+    .flow-intro .section-lead {
+      margin: 0;
+    }
+
+    .capture-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px 24px;
+      align-items: start;
+    }
+
+    .capture-figure {
+      min-width: 0;
+      border-top: 1px solid var(--line-strong);
+      padding-top: 16px;
+    }
+
+    .capture-figure.offset {
+      margin-top: 180px;
+    }
+
+    .capture-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--paper-3);
+      text-transform: uppercase;
+    }
+
+    .capture-window {
+      position: relative;
+      overflow: hidden;
+      min-height: 720px;
+      display: grid;
+      place-items: center;
+      background: #111014;
+      border: 1px solid var(--line);
+    }
+
+    .capture-figure.large .capture-window {
+      min-height: 900px;
+    }
+
+    .capture-window::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border: 1px solid rgba(240, 201, 77, 0.14);
+      pointer-events: none;
+      transform: scale(0.97);
+      opacity: 0;
+      transition: transform 420ms var(--ease-out), opacity 240ms ease;
+    }
+
+    .capture-window img {
+      width: min(73%, 430px);
+      height: auto;
+      filter: saturate(0.92);
+      transition: transform 520ms var(--ease-out), filter 300ms ease;
+    }
+
+    .capture-figure.large .capture-window img {
+      width: min(70%, 500px);
+    }
+
+    .capture-window:hover::after {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .capture-window:hover img {
+      transform: translateY(-8px) scale(1.015);
+      filter: saturate(1.05) contrast(1.03);
+    }
+
+    .capture-caption {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 20px;
+      padding-top: 20px;
+    }
+
+    .capture-caption span {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .capture-caption h3 {
+      margin-bottom: 8px;
+      font-family: var(--display);
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    html[lang="ko"] .capture-caption h3 {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: 29px;
+      line-height: 1.2;
+    }
+
+    .capture-caption p {
+      max-width: 520px;
+      color: var(--paper-3);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* Contact sheet */
+    .contact-sheet {
+      background: var(--paper);
+      color: var(--ink);
+    }
+
+    .contact-sheet .section-index {
+      color: #17796d;
+    }
+
+    .contact-sheet .section-title em {
+      color: #9d7200;
+    }
+
+    .sheet-head {
+      display: grid;
+      grid-template-columns: 1fr 0.62fr;
+      align-items: end;
+      gap: 80px;
+      margin-bottom: 80px;
+    }
+
+    .sheet-copy {
+      color: #54524d;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .sheet-grid {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .sheet-shot {
+      position: relative;
+      min-width: 0;
+      min-height: 460px;
+      overflow: hidden;
+      background: #dedbd2;
+      border: 1px solid rgba(8, 8, 9, 0.2);
+    }
+
+    .sheet-shot:nth-child(1) {
+      grid-column: span 5;
+      min-height: 760px;
+    }
+
+    .sheet-shot:nth-child(2) {
+      grid-column: span 3;
+      margin-top: 92px;
+      min-height: 570px;
+    }
+
+    .sheet-shot:nth-child(3) {
+      grid-column: span 4;
+      min-height: 700px;
+    }
+
+    .sheet-shot img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: min(72%, 430px);
+      height: auto;
+      transform: translate(-50%, -50%);
+      transition: transform 520ms var(--ease-out);
+    }
+
+    .sheet-shot:hover img {
+      transform: translate(-50%, calc(-50% - 8px));
+    }
+
+    .sheet-shot figcaption {
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(8, 8, 9, 0.24);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    /* Feature ledger */
+    .ledger-section {
+      background: #101012;
+    }
+
+    .ledger {
+      margin-top: 100px;
+      border-top: 1px solid var(--line-strong);
+    }
+
+    .ledger-row {
+      display: grid;
+      grid-template-columns: 90px minmax(240px, 0.8fr) 1.2fr 180px;
+      align-items: center;
+      min-height: 126px;
+      border-bottom: 1px solid var(--line);
+      transition: background-color 220ms ease;
+    }
+
+    .ledger-row:hover {
+      background: rgba(242, 239, 231, 0.035);
+    }
+
+    .ledger-no {
+      color: var(--mint);
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .ledger-row h3 {
+      font-family: var(--display);
+      font-size: 38px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    html[lang="ko"] .ledger-row h3 {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: 27px;
+      line-height: 1.2;
+    }
+
+    .ledger-row p {
+      max-width: 560px;
+      color: var(--paper-3);
+      font-size: 14px;
+    }
+
+    .ledger-result {
+      justify-self: end;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    /* Pricing */
+    .pricing-head {
+      display: grid;
+      grid-template-columns: 1fr 0.7fr;
+      gap: 80px;
+      align-items: end;
+      margin-bottom: 84px;
+    }
+
+    .pricing-head .section-lead {
+      margin: 0;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border-top: 1px solid var(--line-strong);
+      border-bottom: 1px solid var(--line-strong);
+    }
+
+    .price-plan {
+      min-width: 0;
+      padding: 38px 30px 34px;
+      border-right: 1px solid var(--line);
+    }
+
+    .price-plan:last-child {
+      border-right: 0;
+    }
+
+    .price-plan.featured {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    .price-label {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 44px;
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    .price-plan:not(.featured) .price-label {
+      color: var(--paper-3);
+    }
+
+    .price-plan h3 {
+      font-family: var(--display);
+      font-size: 38px;
+      font-weight: 400;
+    }
+
+    html[lang="ko"] .price-plan h3 {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: 28px;
+    }
+
+    .price-value {
+      margin: 8px 0 26px;
+      font-family: var(--display);
+      font-size: 64px;
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .price-value small {
+      font-family: var(--sans);
+      font-size: 13px;
+    }
+
+    .price-plan ul {
+      list-style: none;
+      padding: 0;
+      min-height: 144px;
+    }
+
+    .price-plan li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 9px;
+      color: var(--paper-2);
+      font-size: 13px;
+    }
+
+    .price-plan.featured li {
+      color: rgba(8, 8, 9, 0.74);
+    }
+
+    .price-plan li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.67em;
+      width: 6px;
+      height: 6px;
+      background: var(--mint);
+    }
+
+    .price-plan.featured li::before {
+      background: var(--ink);
+    }
+
+    .price-plan .button-secondary {
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    .price-plan.featured .button-secondary {
+      border-color: var(--ink);
+      color: var(--ink);
+      background: transparent;
+    }
+
+    .price-plan.featured .button-secondary:hover {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    /* FAQ + Contact */
+    .utility-band {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 720px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .utility-panel {
+      min-width: 0;
+      padding: 110px max(32px, calc((100vw - var(--max)) / 2));
+    }
+
+    .utility-panel:first-child {
+      padding-right: 72px;
+      border-right: 1px solid var(--line);
+    }
+
+    .utility-panel:last-child {
+      padding-left: 72px;
+      background: #10211e;
+    }
+
+    .utility-title {
+      margin-bottom: 48px;
+      font-family: var(--display);
+      font-size: 54px;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    html[lang="ko"] .utility-title {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    .faq-item {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-q {
+      width: 100%;
+      min-height: 70px;
+      display: grid;
+      grid-template-columns: 1fr 24px;
+      gap: 20px;
+      align-items: center;
+      color: var(--paper);
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .faq-icon {
+      position: relative;
+      width: 18px;
+      height: 18px;
+    }
+
+    .faq-icon::before,
+    .faq-icon::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: currentColor;
+      transform: translate(-50%, -50%);
+      transition: transform 220ms var(--ease-out), opacity 160ms ease;
+    }
+
+    .faq-icon::before {
+      width: 16px;
+      height: 1px;
+    }
+
+    .faq-icon::after {
+      width: 1px;
+      height: 16px;
+    }
+
+    .faq-item.open .faq-icon {
+      color: var(--gold);
+    }
+
+    .faq-item.open .faq-icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+      opacity: 0;
+    }
+
+    .faq-a {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 280ms var(--ease-out);
+    }
+
+    .faq-item.open .faq-a {
+      grid-template-rows: 1fr;
+    }
+
+    .faq-a-inner {
+      overflow: hidden;
+    }
+
+    .faq-a-inner p {
+      padding: 0 42px 24px 0;
+      color: var(--paper-3);
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .contact-intro {
+      max-width: 480px;
+      margin-bottom: 36px;
+      color: rgba(242, 239, 231, 0.7);
+      font-size: 14px;
+    }
+
+    .contact-form {
+      display: grid;
+      gap: 20px;
+    }
+
+    .form-row {
+      display: grid;
+      gap: 8px;
+    }
+
+    .form-row label {
+      color: rgba(242, 239, 231, 0.68);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    .form-row input,
+    .form-row textarea {
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid rgba(242, 239, 231, 0.3);
+      border-radius: 0;
+      padding: 13px 0;
+      background: transparent;
+      color: var(--paper);
+      font-size: 16px;
+      transition: border-color 160ms ease;
+    }
+
+    .form-row textarea {
+      min-height: 108px;
+      resize: vertical;
+    }
+
+    .form-row input:focus,
+    .form-row textarea:focus {
+      outline: 0;
+      border-color: var(--gold);
+    }
+
+    .form-row input::placeholder,
+    .form-row textarea::placeholder {
+      color: rgba(242, 239, 231, 0.34);
+    }
+
+    .submit-btn {
+      min-height: 50px;
+      margin-top: 8px;
+      border: 1px solid var(--gold);
+      background: var(--gold);
+      color: var(--ink);
+      font-weight: 800;
+      transition: background-color 160ms ease, transform 160ms ease;
+    }
+
+    .submit-btn:hover {
+      background: #ffdd6a;
+      transform: translateY(-2px);
+    }
+
+    .submit-btn:disabled {
+      cursor: wait;
+      opacity: 0.58;
+      transform: none;
+    }
+
+    .form-status {
+      min-height: 22px;
+      color: var(--paper-2);
+      font-size: 12px;
+    }
+
+    .form-status.ok {
+      color: var(--mint);
+    }
+
+    .form-status.err {
+      color: #ff958f;
+    }
+
+    /* Final CTA */
+    .download-section {
+      position: relative;
+      min-height: 820px;
+      overflow: hidden;
+      background: var(--gold);
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+    }
+
+    .download-copy {
+      position: relative;
+      z-index: 3;
+      width: min(740px, 60vw);
+      padding: 132px 0 118px;
+    }
+
+    .download-kicker {
+      margin-bottom: 28px;
+      font-family: var(--mono);
+      font-size: 10px;
+      text-transform: uppercase;
+    }
+
+    .download-title {
+      font-family: var(--display);
+      font-size: clamp(5rem, 9vw, 10rem);
+      font-weight: 400;
+      line-height: 0.78;
+    }
+
+    html[lang="ko"] .download-title {
+      font-family: "Noto Serif KR", var(--display);
+      font-size: clamp(3.7rem, 7vw, 7.5rem);
+      line-height: 0.98;
+      word-break: keep-all;
+    }
+
+    .download-copy p {
+      max-width: 500px;
+      margin-top: 36px;
+      color: rgba(8, 8, 9, 0.68);
+      font-size: 16px;
+    }
+
+    .download-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 32px;
+    }
+
+    .download-actions .button-primary {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .download-actions .button-primary:hover {
+      background: #242428;
+    }
+
+    .download-actions .button-secondary {
+      border-color: rgba(8, 8, 9, 0.48);
+      background: transparent;
+      color: var(--ink);
+    }
+
+    .download-actions .button-secondary:hover {
+      border-color: var(--ink);
+      background: rgba(8, 8, 9, 0.07);
+      color: var(--ink);
+    }
+
+    .download-device {
+      position: absolute;
+      right: max(2vw, calc((100vw - var(--max)) / 2));
+      bottom: -19%;
+      width: min(31vw, 430px);
+      aspect-ratio: 1206 / 2622;
+      overflow: hidden;
+      border: 1px solid rgba(8, 8, 9, 0.55);
+      border-radius: 48px;
+      background: var(--ink);
+      transform: rotate(5deg);
+      box-shadow: 0 40px 90px rgba(8, 8, 9, 0.28);
+    }
+
+    .download-device img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Footer */
+    .site-footer {
+      padding: 42px 0 calc(42px + env(safe-area-inset-bottom));
+      background: var(--ink);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-size: 20px;
+    }
+
+    .footer-brand img {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+      color: var(--paper-3);
+      font-family: var(--mono);
+      font-size: 9px;
+      text-transform: uppercase;
+    }
+
+    @supports (animation-timeline: scroll()) {
+      .hero-device {
+        animation: heroDeviceDrift linear both;
+        animation-timeline: scroll(root);
+        animation-range: 0 760px;
+      }
+
+      @keyframes heroDeviceDrift {
+        to {
+          transform: translateX(-50%) translateY(90px) rotate(3.5deg);
+          opacity: 0.25;
+        }
+      }
+    }
+
+    @media (max-width: 1180px) {
+      .hero-copy {
+        width: 55vw;
+      }
+
+      .hero-title {
+        font-size: clamp(5.3rem, 10vw, 8rem);
+      }
+
+      .hero-device {
+        left: 70%;
+      }
+
+      .chapter-rail {
+        display: none;
+      }
+
+      .capture-window {
+        min-height: 620px;
+      }
+
+      .capture-figure.large .capture-window {
+        min-height: 760px;
+      }
+
+      .utility-panel {
+        padding-inline: 40px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      :root {
+        --nav-h: 64px;
+      }
+
+      .wrap {
+        width: min(var(--max), calc(100% - 32px));
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-actions {
+        margin-left: auto;
+      }
+
+      .menu-btn {
+        display: inline-flex;
+      }
+
+      .capture-hero {
+        min-height: 92svh;
+      }
+
+      .hero-copy {
+        top: calc(var(--nav-h) + 48px);
+        left: 24px;
+        width: calc(100% - 48px);
+      }
+
+      .hero-title {
+        font-size: clamp(5rem, 16vw, 8rem);
+      }
+
+      .hero-tagline {
+        max-width: 500px;
+        font-size: clamp(2rem, 7vw, 3.8rem);
+      }
+
+      html[lang="ko"] .hero-tagline {
+        max-width: 470px;
+        font-size: clamp(1.8rem, 5.5vw, 3rem);
+      }
+
+      .hero-summary {
+        max-width: 430px;
+      }
+
+      .hero-device {
+        top: auto;
+        bottom: -10%;
+        left: 76%;
+        height: 59%;
+      }
+
+      .hero-proof {
+        bottom: 24px;
+        left: 24px;
+      }
+
+      .proof-item {
+        min-width: 110px;
+        padding-right: 18px;
+        margin-right: 18px;
+      }
+
+      .evidence-ribbon {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .ribbon-cell:nth-child(2) {
+        border-right: 0;
+      }
+
+      .ribbon-cell:nth-child(-n+2) {
+        border-bottom: 1px solid rgba(7, 16, 15, 0.22);
+      }
+
+      .section {
+        padding: 110px 0;
+      }
+
+      .flow-intro,
+      .sheet-head,
+      .pricing-head {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .flow-intro {
+        margin-bottom: 72px;
+      }
+
+      .capture-grid {
+        gap: 56px 18px;
+      }
+
+      .capture-figure.offset {
+        margin-top: 100px;
+      }
+
+      .capture-window,
+      .capture-figure.large .capture-window {
+        min-height: 620px;
+      }
+
+      .sheet-shot:nth-child(1),
+      .sheet-shot:nth-child(2),
+      .sheet-shot:nth-child(3) {
+        grid-column: span 4;
+        min-height: 560px;
+        margin-top: 0;
+      }
+
+      .ledger-row {
+        grid-template-columns: 62px minmax(190px, 0.8fr) 1.2fr;
+      }
+
+      .ledger-result {
+        display: none;
+      }
+
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-plan {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .price-plan:last-child {
+        border-bottom: 0;
+      }
+
+      .price-plan ul {
+        min-height: 0;
+      }
+
+      .utility-band {
+        grid-template-columns: 1fr;
+      }
+
+      .utility-panel:first-child {
+        padding-right: 32px;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .utility-panel:last-child {
+        padding-left: 32px;
+      }
+
+      .download-section {
+        min-height: 760px;
+      }
+
+      .download-copy {
+        width: 70vw;
+      }
+
+      .download-device {
+        right: -4vw;
+        width: 38vw;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        width: calc(100% - 20px);
+      }
+
+      .brand span {
+        font-size: 19px;
+      }
+
+      .lang-btn {
+        min-width: 38px;
+        min-height: 40px;
+      }
+
+      .capture-hero {
+        min-height: 92svh;
+      }
+
+      .capture-hero::after {
+        left: 33.333%;
+        box-shadow: 33.333vw 0 0 var(--line);
+      }
+
+      .hero-copy {
+        top: calc(var(--nav-h) + 30px);
+        left: 16px;
+        width: calc(100% - 32px);
+      }
+
+      .capture-label {
+        margin-bottom: 14px;
+      }
+
+      .hero-title {
+        font-size: clamp(4.5rem, 22vw, 6.4rem);
+        line-height: 0.79;
+      }
+
+      .hero-tagline {
+        width: 92%;
+        margin-top: 20px;
+        font-size: clamp(1.9rem, 9.2vw, 3rem);
+      }
+
+      html[lang="ko"] .hero-tagline {
+        width: 88%;
+        font-size: clamp(1.62rem, 7.2vw, 2.25rem);
+        line-height: 1.18;
+      }
+
+      .hero-summary {
+        display: none;
+      }
+
+      .hero-actions {
+        margin-top: 20px;
+      }
+
+      .hero-actions .button-primary,
+      .hero-actions .button-secondary {
+        min-height: 42px;
+        padding-inline: 14px;
+        font-size: 12px;
+      }
+
+      .hero-device {
+        bottom: -4%;
+        left: 70%;
+        height: 52%;
+        border-radius: 28px;
+      }
+
+      .video-control {
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .hero-proof {
+        left: 16px;
+        bottom: 18px;
+        width: 164px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 16px;
+      }
+
+      .proof-item {
+        min-width: 0;
+        padding-right: 0;
+        margin-right: 0;
+        border-right: 0;
+      }
+
+      .proof-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .proof-item:first-child {
+        padding-right: 14px;
+        border-right: 1px solid var(--line);
+      }
+
+      .proof-item strong {
+        font-size: 20px;
+      }
+
+      .proof-item span {
+        max-width: 72px;
+        font-size: 8px;
+      }
+
+      .evidence-ribbon {
+        min-height: 116px;
+      }
+
+      .ribbon-cell {
+        padding: 14px 16px;
+      }
+
+      .ribbon-cell strong {
+        font-size: 19px;
+      }
+
+      .section {
+        padding: 86px 0;
+      }
+
+      .section-title {
+        font-size: 3.75rem;
+      }
+
+      html[lang="ko"] .section-title {
+        font-size: 2.65rem;
+        line-height: 1.08;
+      }
+
+      .section-lead {
+        margin-top: 22px;
+        font-size: 15px;
+      }
+
+      .capture-grid {
+        grid-template-columns: 1fr;
+        gap: 76px;
+      }
+
+      .capture-figure.offset {
+        margin-top: 0;
+      }
+
+      .capture-window,
+      .capture-figure.large .capture-window {
+        min-height: 620px;
+      }
+
+      .capture-window img,
+      .capture-figure.large .capture-window img {
+        width: min(74%, 360px);
+      }
+
+      .capture-caption {
+        grid-template-columns: 44px 1fr;
+        gap: 12px;
+      }
+
+      .capture-caption h3,
+      html[lang="ko"] .capture-caption h3 {
+        font-size: 25px;
+      }
+
+      .sheet-head {
+        margin-bottom: 48px;
+      }
+
+      .sheet-grid {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 82%;
+        grid-template-columns: none;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        overscroll-behavior-inline: contain;
+        padding: 0 16px 16px;
+        margin-inline: -16px;
+      }
+
+      .sheet-shot:nth-child(1),
+      .sheet-shot:nth-child(2),
+      .sheet-shot:nth-child(3) {
+        grid-column: auto;
+        min-height: 580px;
+        scroll-snap-align: start;
+      }
+
+      .sheet-shot img {
+        width: 72%;
+      }
+
+      .ledger {
+        margin-top: 64px;
+      }
+
+      .ledger-row {
+        grid-template-columns: 40px 1fr;
+        gap: 8px;
+        padding: 24px 0;
+      }
+
+      .ledger-row h3 {
+        font-size: 28px;
+      }
+
+      html[lang="ko"] .ledger-row h3 {
+        font-size: 23px;
+      }
+
+      .ledger-row p {
+        grid-column: 2;
+        margin-top: 4px;
+      }
+
+      .price-plan {
+        padding: 30px 20px;
+      }
+
+      .price-value {
+        font-size: 54px;
+      }
+
+      .utility-panel {
+        padding: 82px 16px;
+      }
+
+      .utility-panel:first-child {
+        padding-right: 16px;
+      }
+
+      .utility-panel:last-child {
+        padding-left: 16px;
+      }
+
+      .utility-title {
+        font-size: 44px;
+      }
+
+      html[lang="ko"] .utility-title {
+        font-size: 32px;
+      }
+
+      .download-section {
+        min-height: 740px;
+      }
+
+      .download-copy {
+        width: calc(100% - 32px);
+        padding: 84px 0 420px;
+      }
+
+      .download-title {
+        font-size: 4.3rem;
+      }
+
+      html[lang="ko"] .download-title {
+        font-size: 3.25rem;
+      }
+
+      .download-device {
+        right: -6%;
+        bottom: -28%;
+        width: 58vw;
+        border-radius: 36px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title {
+        font-size: 4.25rem;
+      }
+
+      html[lang="en"] .hero-tagline {
+        font-size: 1.72rem;
+      }
+
+      html[lang="ko"] .hero-tagline {
+        font-size: 1.52rem;
+      }
+
+      .hero-actions .button-primary,
+      .hero-actions .button-secondary {
+        padding-inline: 11px;
+      }
+
+      .hero-device {
+        height: 48%;
+      }
+
+      .proof-item strong {
+        font-size: 18px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      [data-reveal] {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-ko="본문으로 이동" data-en="Skip to content">본문으로 이동</a>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Tarot Timer home">
+        <img src="./assets/icon.png" width="30" height="30" alt="">
+        <span translate="no">Tarot Timer</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#real-flow" data-ko="실제 화면" data-en="Real screens">실제 화면</a>
+        <a href="#features" data-ko="기능" data-en="Features">기능</a>
+        <a href="#pricing" data-ko="가격" data-en="Pricing">가격</a>
+        <a href="#faq" data-ko="FAQ" data-en="FAQ">FAQ</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="ko" aria-label="한국어">KO</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <a class="nav-cta" href="#download" data-ko="앱 받기" data-en="Get the app">앱 받기</a>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mobilePanel"
+          data-label-ko="메뉴 열기" data-label-en="Open menu">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+            <path d="M4 7h16M4 12h16M4 17h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="mobile-panel" id="mobilePanel" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#real-flow" data-ko="실제 화면" data-en="Real screens">실제 화면</a>
+    <a href="#features" data-ko="기능" data-en="Features">기능</a>
+    <a href="#pricing" data-ko="가격" data-en="Pricing">가격</a>
+    <a href="#faq" data-ko="FAQ" data-en="FAQ">FAQ</a>
+    <a href="#download" data-ko="앱 받기" data-en="Get the app">앱 받기</a>
+  </nav>
+
+  <main id="main">
+    <section class="capture-hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="capture-label" data-ko="실제 iPhone 앱 구동 화면 · 무편집 캡처" data-en="Real iPhone app · unedited capture">실제 iPhone 앱 구동 화면 · 무편집 캡처</p>
+        <h1 class="hero-title" id="heroTitle" data-ko="타로 타이머" data-en="Tarot Timer">타로 타이머</h1>
+        <h2 class="hero-tagline"
+          data-ko="타로를 외우지 말고,<br><em>오늘의 시간</em>으로 읽으세요."
+          data-en="Do not memorize tarot.<br>Read <em>the hour you are in.</em>">타로를 외우지 말고,<br><em>오늘의 시간</em>으로 읽으세요.</h2>
+        <p class="hero-summary"
+          data-ko="지금 시간의 카드에서 시작해 메모, 스프레드, 다이어리까지. 실제 앱의 44초 흐름을 직접 확인해보세요."
+          data-en="Start with the card for this hour, then move through notes, spreads, and your diary. Watch the real 44-second app flow.">지금 시간의 카드에서 시작해 메모, 스프레드, 다이어리까지. 실제 앱의 44초 흐름을 직접 확인해보세요.</p>
+        <div class="hero-actions">
+          <a class="button-primary" href="https://apps.apple.com/us/app/tarot-timer/id6752687014" target="_blank" rel="noopener">
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16.7 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.6.8-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.1 1.2 9.4.8 1.1 1.7 2.4 3 2.3 1.2 0 1.7-.8 3.1-.8s1.9.8 3.1.8c1.3 0 2.1-1.1 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8ZM14.4 5.9c.7-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.9-1 2.9 1 .1 2-.5 2.7-1.3Z" fill="currentColor"/>
+            </svg>
+            <span data-ko="App Store" data-en="App Store">App Store</span>
+          </a>
+          <a class="button-secondary" href="https://play.google.com/store/apps/details?id=com.tarottimer.app&hl=ko" target="_blank" rel="noopener">
+            <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.2 3.1c-.2.2-.3.5-.3.9v16c0 .4.1.7.3.9l8.8-8.9L4.2 3.1Z" fill="#20d27d"/>
+              <path d="m16 8.9-2.9 3 2.9 3 3.7-2.1c1-.6 1-1.9 0-2.5L16 8.9Z" fill="#ffd34d"/>
+              <path d="m4.9 2.6 9.6 9.4 2.9-2.9L6.2 2.7c-.5-.3-.9-.3-1.3-.1Z" fill="#45a5ff"/>
+              <path d="m4.9 21.4c.4.2.8.2 1.3-.1l11.2-6.4-2.9-2.9-9.6 9.4Z" fill="#ff5a6d"/>
+            </svg>
+            <span data-ko="Google Play" data-en="Google Play">Google Play</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-device" aria-label="Tarot Timer 실제 앱 구동 영상">
+        <video id="heroVideo" width="720" height="1566" autoplay muted loop playsinline preload="metadata"
+          poster="./assets/captures/app-home.webp">
+          <source src="./assets/captures/tarot-timer-demo-web.mp4" type="video/mp4">
+        </video>
+        <button class="video-control" id="videoControl" type="button" aria-label="영상 일시정지"
+          data-pause-ko="영상 일시정지" data-pause-en="Pause video"
+          data-play-ko="영상 재생" data-play-en="Play video">
+          <svg class="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M7 5h4v14H7zM13 5h4v14h-4z"/>
+          </svg>
+          <svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="m8 5 11 7-11 7V5Z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="chapter-rail" aria-label="Video chapters">
+        <button class="chapter-button active" type="button" data-time="1" data-ko="01 · 시간의 카드" data-en="01 · Hourly card">01 · 시간의 카드</button>
+        <button class="chapter-button" type="button" data-time="7" data-ko="02 · 카드 상세" data-en="02 · Card detail">02 · 카드 상세</button>
+        <button class="chapter-button" type="button" data-time="20" data-ko="03 · 스프레드" data-en="03 · Spread">03 · 스프레드</button>
+        <button class="chapter-button" type="button" data-time="29" data-ko="04 · 다이어리" data-en="04 · Diary">04 · 다이어리</button>
+        <button class="chapter-button" type="button" data-time="36" data-ko="05 · 기록 상세" data-en="05 · Saved entry">05 · 기록 상세</button>
+      </div>
+
+      <div class="hero-proof" aria-label="Product facts">
+        <div class="proof-item">
+          <strong>78</strong>
+          <span data-ko="카드 의미" data-en="card meanings">카드 의미</span>
+        </div>
+        <div class="proof-item">
+          <strong>24h</strong>
+          <span data-ko="시간의 리듬" data-en="hourly rhythm">시간의 리듬</span>
+        </div>
+        <div class="proof-item">
+          <strong>2 OS</strong>
+          <span data-ko="iOS + Android" data-en="iOS + Android">iOS + Android</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="evidence-ribbon" aria-label="Capture information">
+      <div class="ribbon-cell"><strong data-ko="말보다 먼저, 실제 화면." data-en="The app before the pitch.">말보다 먼저, 실제 화면.</strong></div>
+      <div class="ribbon-cell"><span data-ko="iPhone 17 Pro<br>iOS 시뮬레이터" data-en="iPhone 17 Pro<br>iOS simulator">iPhone 17 Pro<br>iOS 시뮬레이터</span></div>
+      <div class="ribbon-cell"><span data-ko="실제 설치 앱<br>빌드 243" data-en="Installed app<br>build 243">실제 설치 앱<br>빌드 243</span></div>
+      <div class="ribbon-cell"><span data-ko="직접 조작한<br>44초 구동 영상" data-en="44-second flow<br>captured live">직접 조작한<br>44초 구동 영상</span></div>
+    </section>
+
+    <section class="section" id="real-flow">
+      <div class="wrap">
+        <div class="flow-intro">
+          <div>
+            <p class="section-index" data-ko="01 · Real app flow" data-en="01 · Real app flow">01 · Real app flow</p>
+            <h2 class="section-title" data-reveal
+              data-ko="뽑고, 읽고,<br><em>기록으로 돌아옵니다.</em>"
+              data-en="Draw it. Read it.<br><em>Return to the record.</em>">뽑고, 읽고,<br><em>기록으로 돌아옵니다.</em></h2>
+          </div>
+          <p class="section-lead" data-reveal
+            data-ko="화려한 목업이 아니라 실제 앱에서 직접 캡처한 화면입니다. 지금 시간의 카드가 질문이 되고, 질문은 스프레드와 다이어리에 남습니다."
+            data-en="These are direct captures from the installed app, not decorative mockups. The card for this hour becomes a question, then stays in spreads and your diary.">화려한 목업이 아니라 실제 앱에서 직접 캡처한 화면입니다. 지금 시간의 카드가 질문이 되고, 질문은 스프레드와 다이어리에 남습니다.</p>
+        </div>
+
+        <div class="capture-grid">
+          <figure class="capture-figure large" data-reveal>
+            <div class="capture-meta">
+              <span>CAPTURE / 001</span>
+              <span>19:52 KST</span>
+            </div>
+            <div class="capture-window">
+              <img src="./assets/captures/app-home.webp" width="1206" height="2622" fetchpriority="high" alt="Tarot Timer 24시간 타이머 홈 화면">
+            </div>
+            <figcaption class="capture-caption">
+              <span>00:01</span>
+              <div>
+                <h3 data-ko="이 시간에 도착한 카드" data-en="The card that arrived this hour">이 시간에 도착한 카드</h3>
+                <p data-ko="하루를 한 번에 해석하지 않습니다. 지금 이 시간의 카드 한 장으로 관찰을 시작합니다." data-en="Do not interpret the whole day at once. Begin with one card for the hour you are in.">하루를 한 번에 해석하지 않습니다. 지금 이 시간의 카드 한 장으로 관찰을 시작합니다.</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="capture-figure offset" data-reveal>
+            <div class="capture-meta">
+              <span>CAPTURE / 002</span>
+              <span>19:53 KST</span>
+            </div>
+            <div class="capture-window">
+              <img src="./assets/captures/app-card-detail.webp" width="1206" height="2622" loading="lazy" alt="Tarot Timer 카드 상세와 메모 화면">
+            </div>
+            <figcaption class="capture-caption">
+              <span>00:07</span>
+              <div>
+                <h3 data-ko="키워드 다음에, 내 문장" data-en="Your sentence after the keywords">키워드 다음에, 내 문장</h3>
+                <p data-ko="카드의 의미를 읽고 그 시간의 감정과 상황을 적습니다. 암기가 나만의 타로 언어로 바뀝니다." data-en="Read the card, then attach the feeling and situation of that hour. Memorization becomes your own tarot language.">카드의 의미를 읽고 그 시간의 감정과 상황을 적습니다. 암기가 나만의 타로 언어로 바뀝니다.</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="capture-figure" data-reveal>
+            <div class="capture-meta">
+              <span>CAPTURE / 003</span>
+              <span>19:53 KST</span>
+            </div>
+            <div class="capture-window">
+              <img src="./assets/captures/app-spread-reading.webp" width="1206" height="2622" loading="lazy" alt="Tarot Timer 원 카드 스프레드 화면">
+            </div>
+            <figcaption class="capture-caption">
+              <span>00:20</span>
+              <div>
+                <h3 data-ko="질문이 생기면 펼쳐보세요" data-en="Open a spread when a question appears">질문이 생기면 펼쳐보세요</h3>
+                <p data-ko="원 카드부터 여러 장의 배열까지. 질문과 카드의 위치가 한 화면 안에서 맥락을 만듭니다." data-en="From one card to larger layouts, the question and each card position build context on one screen.">원 카드부터 여러 장의 배열까지. 질문과 카드의 위치가 한 화면 안에서 맥락을 만듭니다.</p>
+              </div>
+            </figcaption>
+          </figure>
+
+          <figure class="capture-figure large offset" data-reveal>
+            <div class="capture-meta">
+              <span>CAPTURE / 004</span>
+              <span>19:54 KST</span>
+            </div>
+            <div class="capture-window">
+              <img src="./assets/captures/app-diary-detail.webp" width="1206" height="2622" loading="lazy" alt="Tarot Timer 데일리 타로 기록 상세 화면">
+            </div>
+            <figcaption class="capture-caption">
+              <span>00:36</span>
+              <div>
+                <h3 data-ko="시간이 지나면 패턴이 됩니다" data-en="Over time, the hours become a pattern">시간이 지나면 패턴이 됩니다</h3>
+                <p data-ko="날짜와 시간별 카드, 메모가 함께 남습니다. 흩어진 캡처 대신 다시 읽을 수 있는 기록이 생깁니다." data-en="Cards and notes stay attached to their date and hour. Instead of scattered screenshots, you get a record worth returning to.">날짜와 시간별 카드, 메모가 함께 남습니다. 흩어진 캡처 대신 다시 읽을 수 있는 기록이 생깁니다.</p>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-sheet" aria-labelledby="sheetTitle">
+      <div class="wrap">
+        <div class="sheet-head">
+          <div>
+            <p class="section-index" data-ko="02 · Contact sheet" data-en="02 · Contact sheet">02 · Contact sheet</p>
+            <h2 class="section-title" id="sheetTitle" data-reveal
+              data-ko="하루의 흐름이<br><em>한곳에 모입니다.</em>"
+              data-en="The day comes back<br><em>into one place.</em>">하루의 흐름이<br><em>한곳에 모입니다.</em></h2>
+          </div>
+          <p class="sheet-copy" data-reveal
+            data-ko="스프레드를 고르고, 리딩을 저장하고, 날짜별 다이어리에서 다시 확인합니다. 화면마다 같은 보라와 골드의 언어를 유지해 흐름이 끊기지 않습니다."
+            data-en="Choose a spread, save a reading, then return through the dated diary. A consistent visual language keeps the flow intact.">스프레드를 고르고, 리딩을 저장하고, 날짜별 다이어리에서 다시 확인합니다. 화면마다 같은 보라와 골드의 언어를 유지해 흐름이 끊기지 않습니다.</p>
+        </div>
+
+        <div class="sheet-grid" aria-label="실제 앱 화면 모음">
+          <figure class="sheet-shot" data-reveal>
+            <img src="./assets/captures/app-spreads.webp" width="1206" height="2622" loading="lazy" alt="Tarot Timer 스프레드 선택 화면">
+            <figcaption><span data-ko="스프레드 선택" data-en="Choose a spread">스프레드 선택</span><span>01 / 03</span></figcaption>
+          </figure>
+          <figure class="sheet-shot" data-reveal>
+            <img src="./assets/captures/app-diary.webp" width="1206" height="2622" loading="lazy" alt="Tarot Timer 다이어리 목록 화면">
+            <figcaption><span data-ko="다이어리 목록" data-en="Diary archive">다이어리 목록</span><span>02 / 03</span></figcaption>
+          </figure>
+          <figure class="sheet-shot" data-reveal>
+            <img src="./assets/captures/app-card-detail.webp" width="1206" height="2622" loading="lazy" alt="Tarot Timer 카드 의미와 메모 화면">
+            <figcaption><span data-ko="카드 의미와 메모" data-en="Meaning & note">카드 의미와 메모</span><span>03 / 03</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section ledger-section" id="features">
+      <div class="wrap">
+        <p class="section-index" data-ko="03 · What changes" data-en="03 · What changes">03 · What changes</p>
+        <h2 class="section-title" data-reveal
+          data-ko="기능보다 중요한 건<br><em>남는 방식입니다.</em>"
+          data-en="The feature matters less<br>than <em>what remains.</em>">기능보다 중요한 건<br><em>남는 방식입니다.</em></h2>
+
+        <div class="ledger">
+          <article class="ledger-row" data-reveal>
+            <span class="ledger-no">01</span>
+            <h3 data-ko="24시간 타이머" data-en="24-hour timer">24시간 타이머</h3>
+            <p data-ko="마음 내킬 때만 뽑던 카드가 지금 시간을 관찰하는 작은 루틴이 됩니다." data-en="A card you drew on impulse becomes a small ritual for observing the hour you are in.">마음 내킬 때만 뽑던 카드가 지금 시간을 관찰하는 작은 루틴이 됩니다.</p>
+            <span class="ledger-result" data-ko="EVENT → RHYTHM" data-en="EVENT → RHYTHM">EVENT → RHYTHM</span>
+          </article>
+          <article class="ledger-row" data-reveal>
+            <span class="ledger-no">02</span>
+            <h3 data-ko="카드 의미 + 메모" data-en="Meaning + note">카드 의미 + 메모</h3>
+            <p data-ko="남이 쓴 키워드 위에 그 시간의 감정과 상황을 붙여 나만의 해석으로 바꿉니다." data-en="Attach the feeling and situation of that hour to the keywords, turning them into your interpretation.">남이 쓴 키워드 위에 그 시간의 감정과 상황을 붙여 나만의 해석으로 바꿉니다.</p>
+            <span class="ledger-result" data-ko="MEMORY → LANGUAGE" data-en="MEMORY → LANGUAGE">MEMORY → LANGUAGE</span>
+          </article>
+          <article class="ledger-row" data-reveal>
+            <span class="ledger-no">03</span>
+            <h3 data-ko="스프레드 저장" data-en="Saved spreads">스프레드 저장</h3>
+            <p data-ko="질문, 카드 배열, 해석이 함께 남아 시간이 지나도 리딩의 맥락을 잃지 않습니다." data-en="The question, layout, and interpretation stay together, so the reading keeps its context.">질문, 카드 배열, 해석이 함께 남아 시간이 지나도 리딩의 맥락을 잃지 않습니다.</p>
+            <span class="ledger-result" data-ko="CAPTURE → CONTEXT" data-en="CAPTURE → CONTEXT">CAPTURE → CONTEXT</span>
+          </article>
+          <article class="ledger-row" data-reveal>
+            <span class="ledger-no">04</span>
+            <h3 data-ko="다이어리 아카이브" data-en="Diary archive">다이어리 아카이브</h3>
+            <p data-ko="날짜별 기록을 다시 읽으며 반복되는 카드와 감정의 패턴을 발견합니다." data-en="Revisit dated entries to notice recurring cards and emotional patterns.">날짜별 기록을 다시 읽으며 반복되는 카드와 감정의 패턴을 발견합니다.</p>
+            <span class="ledger-result" data-ko="MOMENT → PATTERN" data-en="MOMENT → PATTERN">MOMENT → PATTERN</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="pricing-head">
+          <div>
+            <p class="section-index" data-ko="04 · Pricing" data-en="04 · Pricing">04 · Pricing</p>
+            <h2 class="section-title" data-reveal
+              data-ko="무료로 시작하고,<br><em>기록만 확장하세요.</em>"
+              data-en="Start free.<br><em>Expand the archive.</em>">무료로 시작하고,<br><em>기록만 확장하세요.</em></h2>
+          </div>
+          <p class="section-lead" data-reveal
+            data-ko="타이머와 기본 리딩은 무료로 경험하세요. 더 많은 기록과 스프레드를 오래 보관하고 싶을 때 프리미엄으로 확장할 수 있습니다."
+            data-en="Experience the timer and basic readings for free. Upgrade when you want to keep more notes and spreads for longer.">타이머와 기본 리딩은 무료로 경험하세요. 더 많은 기록과 스프레드를 오래 보관하고 싶을 때 프리미엄으로 확장할 수 있습니다.</p>
+        </div>
+
+        <div class="price-grid">
+          <article class="price-plan" data-reveal>
+            <div class="price-label"><span>FREE</span><span>01</span></div>
+            <h3 data-ko="첫 번째 리듬" data-en="First rhythm">첫 번째 리듬</h3>
+            <div class="price-value" data-ko="₩0" data-en="$0">₩0</div>
+            <ul>
+              <li data-ko="24시간 타로 타이머" data-en="24-hour tarot timer">24시간 타로 타이머</li>
+              <li data-ko="기본 카드 리딩" data-en="Basic card readings">기본 카드 리딩</li>
+              <li data-ko="무료로 앱 경험 시작" data-en="Start the app for free">무료로 앱 경험 시작</li>
+            </ul>
+            <a class="button-secondary" href="#download" data-ko="무료로 시작" data-en="Start free">무료로 시작</a>
+          </article>
+
+          <article class="price-plan featured" data-reveal>
+            <div class="price-label"><span data-ko="MONTHLY · 추천" data-en="MONTHLY · POPULAR">MONTHLY · 추천</span><span>02</span></div>
+            <h3 data-ko="꾸준한 기록" data-en="Steady practice">꾸준한 기록</h3>
+            <div class="price-value"><span data-ko="₩4,400" data-en="$3.99">₩4,400</span><small data-ko="/월" data-en="/mo">/월</small></div>
+            <ul>
+              <li data-ko="더 많은 카드 기록 저장" data-en="Save more card notes">더 많은 카드 기록 저장</li>
+              <li data-ko="스프레드와 다이어리 확장" data-en="Expanded spreads and diary">스프레드와 다이어리 확장</li>
+              <li data-ko="월 단위로 부담 없이 사용" data-en="Flexible monthly use">월 단위로 부담 없이 사용</li>
+            </ul>
+            <a class="button-secondary" href="#download" data-ko="프리미엄 시작" data-en="Start premium">프리미엄 시작</a>
+          </article>
+
+          <article class="price-plan" data-reveal>
+            <div class="price-label"><span>YEARLY</span><span>03</span></div>
+            <h3 data-ko="긴 호흡의 아카이브" data-en="Long-form archive">긴 호흡의 아카이브</h3>
+            <div class="price-value"><span data-ko="₩33,000" data-en="$29.99">₩33,000</span><small data-ko="/년" data-en="/yr">/년</small></div>
+            <ul>
+              <li data-ko="월간 대비 더 좋은 가격" data-en="Better value than monthly">월간 대비 더 좋은 가격</li>
+              <li data-ko="긴 기간의 다이어리 보관" data-en="Keep a longer diary">긴 기간의 다이어리 보관</li>
+              <li data-ko="타로 공부와 자기 관찰에 적합" data-en="For tarot study and reflection">타로 공부와 자기 관찰에 적합</li>
+            </ul>
+            <a class="button-secondary" href="#download" data-ko="연간 플랜 보기" data-en="View yearly plan">연간 플랜 보기</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="utility-band">
+      <div class="utility-panel" id="faq">
+        <p class="section-index" data-ko="05 · FAQ" data-en="05 · FAQ">05 · FAQ</p>
+        <h2 class="utility-title" data-ko="시작 전에<br>궁금한 것들." data-en="Before you<br>begin.">시작 전에<br>궁금한 것들.</h2>
+
+        <div class="faq-list">
+          <div class="faq-item open">
+            <button class="faq-q" type="button" aria-expanded="true">
+              <span data-ko="타로를 잘 몰라도 사용할 수 있나요?" data-en="Can I use it if I am new to tarot?">타로를 잘 몰라도 사용할 수 있나요?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner"><p data-ko="네. 카드 키워드와 의미를 보면서 하루의 상황과 연결할 수 있어 처음 시작하는 사람에게도 부담이 적습니다." data-en="Yes. Card keywords and meanings help you connect each draw to your day, even when you are just starting.">네. 카드 키워드와 의미를 보면서 하루의 상황과 연결할 수 있어 처음 시작하는 사람에게도 부담이 적습니다.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span data-ko="일반 카드 뽑기 앱과 무엇이 다른가요?" data-en="How is this different from a card draw app?">일반 카드 뽑기 앱과 무엇이 다른가요?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner"><p data-ko="카드를 한 번 보여주고 끝나는 대신 시간, 메모, 스프레드와 다이어리를 연결해 나중에도 리딩을 다시 읽을 수 있습니다." data-en="Instead of showing a card once, Tarot Timer connects time, notes, spreads, and diary entries so readings remain useful later.">카드를 한 번 보여주고 끝나는 대신 시간, 메모, 스프레드와 다이어리를 연결해 나중에도 리딩을 다시 읽을 수 있습니다.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span data-ko="매일 오래 기록해야 하나요?" data-en="Do I need to write for a long time every day?">매일 오래 기록해야 하나요?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner"><p data-ko="아니요. 지금 시간의 카드와 한 줄 메모만 남겨도 나중에 다시 읽을 수 있는 패턴이 생깁니다." data-en="No. One card and one short note for the current hour are enough to build a pattern you can revisit.">아니요. 지금 시간의 카드와 한 줄 메모만 남겨도 나중에 다시 읽을 수 있는 패턴이 생깁니다.</p></div>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" type="button" aria-expanded="false">
+              <span data-ko="iOS와 Android에서 모두 사용할 수 있나요?" data-en="Is it available on iOS and Android?">iOS와 Android에서 모두 사용할 수 있나요?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner"><p data-ko="네. App Store와 Google Play에서 모두 다운로드할 수 있습니다." data-en="Yes. Tarot Timer is available on both the App Store and Google Play.">네. App Store와 Google Play에서 모두 다운로드할 수 있습니다.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="utility-panel" id="contact">
+        <p class="section-index" data-ko="06 · Contact" data-en="06 · Contact">06 · Contact</p>
+        <h2 class="utility-title" data-ko="의견과 질문을<br>남겨주세요." data-en="Leave a thought<br>or a question.">의견과 질문을<br>남겨주세요.</h2>
+        <p class="contact-intro"
+          data-ko="타로 타이머에 관한 피드백, 제휴 또는 문의 내용을 보내주세요. 확인 후 답변드리겠습니다."
+          data-en="Send feedback, a partnership idea, or a question about Tarot Timer. We will review your message and reply.">타로 타이머에 관한 피드백, 제휴 또는 문의 내용을 보내주세요. 확인 후 답변드리겠습니다.</p>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <label for="name" data-ko="이름" data-en="Name">이름</label>
+            <input id="name" name="name" autocomplete="name" required
+              data-placeholder-ko="이름 또는 닉네임…" data-placeholder-en="Name or nickname…" placeholder="이름 또는 닉네임…">
+          </div>
+          <div class="form-row">
+            <label for="contactField" data-ko="연락처" data-en="Contact">연락처</label>
+            <input id="contactField" name="contact" type="email" inputmode="email" autocomplete="email" spellcheck="false" required
+              data-placeholder-ko="example@email.com…" data-placeholder-en="example@email.com…" placeholder="example@email.com…">
+          </div>
+          <div class="form-row">
+            <label for="message" data-ko="내용" data-en="Message">내용</label>
+            <textarea id="message" name="message" autocomplete="off" required
+              data-placeholder-ko="문의 내용을 적어주세요…" data-placeholder-en="Write your message…" placeholder="문의 내용을 적어주세요…"></textarea>
+          </div>
+          <button class="submit-btn" type="submit" data-ko="문의 보내기" data-en="Send message">문의 보내기</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="download-section" id="download">
+      <div class="wrap">
+        <div class="download-copy">
+          <p class="download-kicker" data-ko="Available now · iOS + Android" data-en="Available now · iOS + Android">Available now · iOS + Android</p>
+          <h2 class="download-title" data-ko="지금<br>이 시간을<br>읽어보세요." data-en="Read<br>this hour<br>now.">지금<br>이 시간을<br>읽어보세요.</h2>
+          <p data-ko="Tarot Timer를 열고 현재 시간의 카드 한 장에서 시작하세요. 무료로 다운로드할 수 있습니다." data-en="Open Tarot Timer and begin with one card for the current hour. The app is free to download.">Tarot Timer를 열고 현재 시간의 카드 한 장에서 시작하세요. 무료로 다운로드할 수 있습니다.</p>
+          <div class="download-actions">
+            <a class="button-primary" href="https://apps.apple.com/us/app/tarot-timer/id6752687014" target="_blank" rel="noopener">
+              <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16.7 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.5-.2-2.8.8-3.6.8-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.1 1.2 9.4.8 1.1 1.7 2.4 3 2.3 1.2 0 1.7-.8 3.1-.8s1.9.8 3.1.8c1.3 0 2.1-1.1 2.9-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.8ZM14.4 5.9c.7-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.9-1 2.9 1 .1 2-.5 2.7-1.3Z" fill="currentColor"/>
+              </svg>
+              <span>App Store</span>
+            </a>
+            <a class="button-secondary" href="https://play.google.com/store/apps/details?id=com.tarottimer.app&hl=ko" target="_blank" rel="noopener">
+              <svg class="button-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4.2 3.1c-.2.2-.3.5-.3.9v16c0 .4.1.7.3.9l8.8-8.9L4.2 3.1Z" fill="#20d27d"/>
+                <path d="m16 8.9-2.9 3 2.9 3 3.7-2.1c1-.6 1-1.9 0-2.5L16 8.9Z" fill="#9a7100"/>
+                <path d="m4.9 2.6 9.6 9.4 2.9-2.9L6.2 2.7c-.5-.3-.9-.3-1.3-.1Z" fill="#17689b"/>
+                <path d="m4.9 21.4c.4.2.8.2 1.3-.1l11.2-6.4-2.9-2.9-9.6 9.4Z" fill="#b12d3c"/>
+              </svg>
+              <span>Google Play</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="download-device" aria-hidden="true">
+        <img src="./assets/captures/app-home.webp" width="1206" height="2622" loading="lazy" alt="">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="footer-brand" href="#top">
+        <img src="./assets/icon.png" width="28" height="28" alt="">
+        <span translate="no">Tarot Timer</span>
+      </a>
+      <div class="footer-links">
+        <a href="#contact" data-ko="문의" data-en="Contact">문의</a>
+        <a href="https://therearenorules.github.io/privacy.html" data-ko="개인정보처리방침" data-en="Privacy">개인정보처리방침</a>
+        <a href="https://therearenorules.github.io/terms.html" data-ko="이용약관" data-en="Terms">이용약관</a>
+        <span>© 2026 Tarot Timer</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Language
+    const urlParams = new URLSearchParams(window.location.search);
+    const requestedLang = urlParams.get('lang');
+    const pageMeta = {
+      ko: {
+        title: '타로 타이머 (Tarot Timer) | 24시간 타로카드 학습 앱',
+        description: '타로 타이머(Tarot Timer)는 매시간 한 장씩 78장 타로카드 의미를 배우고, 오늘의 타로 메모·스프레드·타로 일기를 기록하는 iOS·Android 앱입니다.',
+        ogTitle: '타로 타이머 (Tarot Timer) — 24시간 타로카드 학습 앱',
+        ogDescription: '매시간 한 장의 타로카드부터 카드 의미, 메모, 스프레드, 타로 일기까지 한 흐름으로 기록하세요.',
+        locale: 'ko_KR'
+      },
+      en: {
+        title: 'Tarot Timer | Hourly Tarot Card Learning App',
+        description: 'Tarot Timer helps you learn all 78 tarot card meanings one hour at a time, with notes, spreads, reminders, and a tarot diary on iOS and Android.',
+        ogTitle: 'Tarot Timer — Learn Tarot Cards One Hour at a Time',
+        ogDescription: 'Hourly tarot cards, meanings, notes, spreads, reminders, and a diary in one app.',
+        locale: 'en_US'
+      }
+    };
+
+    let currentLang = requestedLang === 'en' ? 'en' : 'ko';
+
+    function updateMeta(lang) {
+      const meta = pageMeta[lang];
+      document.title = meta.title;
+      document.querySelector('meta[name="description"]')?.setAttribute('content', meta.description);
+      document.querySelector('meta[property="og:title"]')?.setAttribute('content', meta.ogTitle);
+      document.querySelector('meta[property="og:description"]')?.setAttribute('content', meta.ogDescription);
+      document.querySelector('meta[property="og:locale"]')?.setAttribute('content', meta.locale);
+    }
+
+    function updateStoreLinks(lang) {
+      document.querySelectorAll('a[href*="play.google.com/store/apps/details"]').forEach(anchor => {
+        const url = new URL(anchor.href);
+        url.searchParams.set('hl', lang);
+        anchor.href = url.toString();
+      });
+    }
+
+    function syncUrlLang(lang) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', url);
+    }
+
+    function applyLang(lang, options = {}) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('tarotTimerLang', lang);
+      if (options.updateUrl) syncUrlLang(lang);
+
+      document.querySelectorAll('[data-ko]').forEach(element => {
+        const value = element.getAttribute(`data-${lang}`);
+        if (value !== null) element.innerHTML = value;
+      });
+      document.querySelectorAll('[data-placeholder-ko]').forEach(element => {
+        const value = element.getAttribute(`data-placeholder-${lang}`);
+        if (value !== null) element.placeholder = value;
+      });
+      document.querySelectorAll('[data-label-ko]').forEach(element => {
+        const value = element.getAttribute(`data-label-${lang}`);
+        if (value !== null) element.setAttribute('aria-label', value);
+      });
+      document.querySelectorAll('.lang-btn').forEach(button => {
+        button.classList.toggle('active', button.dataset.lang === lang);
+      });
+      updateMeta(lang);
+      updateStoreLinks(lang);
+      syncVideoControlLabel();
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        if (button.dataset.lang === 'en') {
+          localStorage.setItem('tarotTimerLang', 'en');
+          window.location.assign('./en/');
+          return;
+        }
+        applyLang(button.dataset.lang, { updateUrl: true });
+        closeMobileMenu();
+      });
+    });
+
+    // Mobile navigation
+    const menuBtn = document.getElementById('menuBtn');
+    const mobilePanel = document.getElementById('mobilePanel');
+
+    function closeMobileMenu() {
+      mobilePanel?.classList.remove('open');
+      mobilePanel?.setAttribute('aria-hidden', 'true');
+      menuBtn?.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('menu-open');
+    }
+
+    menuBtn?.addEventListener('click', () => {
+      const isOpen = mobilePanel.classList.toggle('open');
+      mobilePanel.setAttribute('aria-hidden', String(!isOpen));
+      menuBtn.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('menu-open', isOpen);
+    });
+
+    mobilePanel?.querySelectorAll('a').forEach(anchor => {
+      anchor.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeMobileMenu();
+    });
+
+    // Real app video
+    const heroVideo = document.getElementById('heroVideo');
+    const videoControl = document.getElementById('videoControl');
+    const chapterButtons = [...document.querySelectorAll('.chapter-button')];
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let manuallyPaused = reduceMotion.matches;
+
+    function syncVideoControlLabel() {
+      if (!videoControl || !heroVideo) return;
+      const key = heroVideo.paused ? `data-play-${currentLang}` : `data-pause-${currentLang}`;
+      videoControl.setAttribute('aria-label', videoControl.getAttribute(key) || '');
+      videoControl.classList.toggle('is-paused', heroVideo.paused);
+    }
+
+    if (reduceMotion.matches) {
+      heroVideo?.pause();
+    }
+
+    videoControl?.addEventListener('click', async () => {
+      if (heroVideo.paused) {
+        manuallyPaused = false;
+        try {
+          await heroVideo.play();
+        } catch (error) {
+          manuallyPaused = true;
+        }
+      } else {
+        manuallyPaused = true;
+        heroVideo.pause();
+      }
+      syncVideoControlLabel();
+    });
+
+    heroVideo?.addEventListener('play', syncVideoControlLabel);
+    heroVideo?.addEventListener('pause', syncVideoControlLabel);
+
+    chapterButtons.forEach(button => {
+      button.addEventListener('click', async () => {
+        heroVideo.currentTime = Number(button.dataset.time || 0);
+        manuallyPaused = false;
+        try {
+          await heroVideo.play();
+        } catch (error) {
+          manuallyPaused = true;
+        }
+        syncVideoControlLabel();
+      });
+    });
+
+    heroVideo?.addEventListener('timeupdate', () => {
+      const currentTime = heroVideo.currentTime;
+      let activeIndex = 0;
+      chapterButtons.forEach((button, index) => {
+        if (currentTime >= Number(button.dataset.time || 0)) activeIndex = index;
+      });
+      chapterButtons.forEach((button, index) => {
+        button.classList.toggle('active', index === activeIndex);
+      });
+    });
+
+    const videoVisibility = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!heroVideo) return;
+        if (!entry.isIntersecting) {
+          heroVideo.pause();
+        } else if (!manuallyPaused && !reduceMotion.matches) {
+          heroVideo.play().catch(() => {});
+        }
+        syncVideoControlLabel();
+      });
+    }, { threshold: 0.12 });
+
+    if (heroVideo) videoVisibility.observe(heroVideo);
+
+    // Reveal
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -48px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(element => {
+      revealObserver.observe(element);
+    });
+
+    // Scroll progress
+    const progress = document.getElementById('scrollProgress');
+    let progressFrame = 0;
+
+    function updateProgress() {
+      progressFrame = 0;
+      const root = document.documentElement;
+      const maxScroll = root.scrollHeight - root.clientHeight;
+      const progressValue = maxScroll > 0 ? root.scrollTop / maxScroll : 0;
+      progress.style.width = `${progressValue * 100}%`;
+    }
+
+    document.addEventListener('scroll', () => {
+      if (!progressFrame) progressFrame = requestAnimationFrame(updateProgress);
+    }, { passive: true });
+    updateProgress();
+
+    // FAQ
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const button = item.querySelector('.faq-q');
+      button.addEventListener('click', () => {
+        const isOpen = item.classList.toggle('open');
+        button.setAttribute('aria-expanded', String(isOpen));
+      });
+    });
+
+    // Contact
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    const submitBtn = form?.querySelector('.submit-btn');
+    const SUPABASE_URL = 'https://syzefbnrnnjkdnoqbwsk.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYXNlIiwicmVmIjoic3l6ZWZibnJubmprZG5vcWJ3c2siLCJyb2xlIjoiYW5vbiIsImlhdCI6MTc1NzgzMzAzNywiZXhwIjoyMDczNDA5MDM3fQ.EnWZW9v05w81eHuPitmWnbbKf9nAbdr-Aj58uk0fESE';
+    const formMessages = {
+      ko: {
+        sending: '문의 내용을 전송하고 있습니다…',
+        success: '문의가 접수되었습니다. 확인 후 답변드리겠습니다.',
+        error: '전송하지 못했습니다. 잠시 후 다시 시도해주세요.'
+      },
+      en: {
+        sending: 'Sending your message…',
+        success: 'Your message has been received. We will reply soon.',
+        error: 'Could not send the message. Please try again later.'
+      }
+    };
+
+    form?.addEventListener('submit', async event => {
+      event.preventDefault();
+      const fields = new FormData(form);
+      const payload = {
+        name: String(fields.get('name') || '').trim(),
+        contact: String(fields.get('contact') || '').trim(),
+        message: String(fields.get('message') || '').trim(),
+        language: currentLang,
+        source: 'landing_page',
+        created_at: new Date().toISOString()
+      };
+
+      status.textContent = formMessages[currentLang].sending;
+      status.classList.remove('ok', 'err');
+      submitBtn.disabled = true;
+      submitBtn.setAttribute('aria-busy', 'true');
+
+      try {
+        const response = await fetch(`${SUPABASE_URL}/rest/v1/landing_contacts`, {
+          method: 'POST',
+          headers: {
+            apikey: SUPABASE_ANON_KEY,
+            Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+            'Content-Type': 'application/json',
+            Prefer: 'return=minimal'
+          },
+          body: JSON.stringify(payload)
+        });
+        if (!response.ok) throw new Error(`Contact insert failed: ${response.status}`);
+
+        status.textContent = formMessages[currentLang].success;
+        status.classList.add('ok');
+        form.reset();
+      } catch (error) {
+        status.textContent = formMessages[currentLang].error;
+        status.classList.add('err');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.removeAttribute('aria-busy');
+      }
+    });
+
+    applyLang(currentLang);
+    syncVideoControlLabel();
+  </script>
+</body>
+</html>

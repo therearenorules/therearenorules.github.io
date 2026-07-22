@@ -1,0 +1,20 @@
+{
+  "name": "타로 타이머 · Tarot Timer",
+  "short_name": "Tarot Timer",
+  "description": "매시간 한 장씩 타로카드 의미를 배우고 기록하는 24시간 타로 타이머 앱",
+  "lang": "ko-KR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#7b2cbf",
+  "background_color": "#080809",
+  "categories": ["education", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
