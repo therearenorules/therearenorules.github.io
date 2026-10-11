@@ -27,7 +27,7 @@
 <main>
   <header>
     <h1>계정 및 데이터 삭제</h1>
-    <p>Tarot Timer는 앱 사용을 위해 익명 계정을 만들 수 있습니다. 아래 방법으로 계정과 관련 데이터를 삭제할 수 있습니다.</p>
+    <p>Tarot Timer는 앱 사용을 위해 익명 계정을 자동으로 만듭니다. 앱 1.4.9 이상에서는 앱 안에서 바로 계정과 서버에 저장된 데이터를 삭제할 수 있습니다. 이전 버전을 쓰거나 앱을 이미 지웠다면 아래 이메일로 요청해 주세요.</p>
     <nav>
       <a href="#ko">한국어</a>
       <a href="#en">English</a>
@@ -38,34 +38,41 @@
   </header>
 
   <section class="card" id="ko">
-    <h2>앱에서 즉시 삭제</h2>
+    <h2>앱에서 삭제 (1.4.9 이상)</h2>
     <ol>
-      <li>Tarot Timer를 엽니다.</li>
-      <li><strong>설정 → 데이터 관리</strong>로 이동합니다.</li>
-      <li><strong>계정 및 데이터 삭제</strong>를 누릅니다.</li>
-      <li>두 번의 삭제 확인을 완료합니다.</li>
+      <li>설정 탭 → 데이터 관리 맨 아래의 ‘계정 및 데이터 삭제’를 누릅니다.</li>
+      <li>삭제되는 항목과 구독 안내를 확인한 뒤 두 번 확인합니다. 인터넷 연결이 필요하며, 서버 삭제가 실패하면 기기의 데이터도 그대로 둡니다.</li>
+      <li>서버 삭제가 끝나면 이 기기의 기록·설정·예약된 알림과 앱이 만든 iCloud/Google Drive 백업도 지우고, 앱이 처음 상태로 다시 시작됩니다.</li>
     </ol>
-    <p>이 방법은 로그인된 익명 계정의 본인 확인을 자동으로 수행하며 가장 빠릅니다.</p>
-
-    <h2>앱을 사용할 수 없는 경우</h2>
-    <p>아래 이메일로 “Tarot Timer 계정 삭제 요청”을 보내주세요. 보안을 위해 계정과 연결된 기기 또는 구매 정보를 확인하는 최소한의 절차를 안내할 수 있습니다. 이메일로 영수증 전체나 비밀번호를 보내지 마세요.</p>
+    <h2>이메일로 삭제 요청 (이전 버전 또는 앱을 지운 경우)</h2>
+    <ol>
+      <li><a href="mailto:changsekwon@gmail.com?subject=Tarot%20Timer%20계정%20삭제%20요청">changsekwon@gmail.com</a>으로 제목을 “Tarot Timer 계정 삭제 요청”으로 해서 이메일을 보냅니다.</li>
+      <li>본문에 사용 기기 종류(iPhone·iPad·Android), 앱을 처음 사용한 대략적인 시기, Android라면 기기 설정에 표시되는 기기 이름을 적어 주세요. 구독한 적이 있다면 스토어 영수증의 주문 번호를 함께 보내 주시면 계정을 찾는 데 도움이 됩니다.</li>
+      <li>계정을 특정하기 위해 최소한의 확인을 추가로 요청할 수 있습니다. 비밀번호, 영수증 전체 또는 결제 카드 정보는 보내지 마세요.</li>
+    </ol>
+    <p>접수 확인은 영업일 기준 2일 이내 회신을 목표로 하며, 계정이 확인되면 요청을 받은 날부터 10일 이내에 삭제하고 결과를 알려 드립니다. 보내 주신 정보로 계정을 특정할 수 없으면 그 사실을 안내해 드립니다.</p>
     <a class="button" href="mailto:changsekwon@gmail.com?subject=Tarot%20Timer%20계정%20삭제%20요청">이메일로 삭제 요청</a>
 
     <h2>삭제되는 정보</h2>
     <ul>
       <li>Supabase 익명 인증 계정과 기기 매핑</li>
-      <li>동기화된 카드, 일기, 메모, 스프레드와 설정</li>
-      <li>사용 분석 기록, 알림 설정과 푸시 토큰</li>
-      <li>기기 안의 앱 데이터, 분석 대기열, 위젯 데이터, 앱이 만든 내보내기 파일</li>
-      <li>가능한 경우 iCloud 또는 Google Drive에 앱이 만든 백업과 iOS의 앱 식별 정보</li>
+      <li>클라우드 동기화로 저장된 데일리 타로 기록, 스프레드, 일기·메모와 설정</li>
+      <li>구독·프로모션 기록(아래 ‘남을 수 있는 정보’의 법정 보존 대상 제외)</li>
+      <li>푸시 토큰과 알림 설정</li>
+      <li>사용 통계</li>
+      <li>요청하시면 홈페이지 문의 기록도 함께 삭제합니다</li>
     </ul>
+
+    <h2>기기에 저장된 데이터</h2>
+    <p>앱을 삭제하면 기기에 저장된 기록, 설정, 위젯 데이터와 광고 시청 보상이 함께 삭제됩니다. 다만 iOS 키체인·iCloud 키-값 저장소의 앱 식별자와 Android의 앱 범위 기기 식별자는 운영체제가 관리해 앱을 삭제해도 남을 수 있습니다. 서버 계정이 삭제된 뒤 앱을 다시 사용하면 새 익명 계정이 만들어집니다.</p>
 
     <h2>남을 수 있는 정보</h2>
     <ul>
       <li>Apple 또는 Google이 자체 계정과 정책에 따라 보관하는 구매·구독 기록</li>
-      <li>구매 복원, 환불, 분쟁, 회계, 법적 의무와 부정 사용 방지에 필요한 거래 기록</li>
-      <li>Android 운영체제가 관리해 앱이 직접 삭제할 수 없는 앱 범위 기기 식별자</li>
-      <li>기술적 제한으로 자동 삭제되지 않은 클라우드 또는 Android 시스템 백업. 이 경우 iCloud, Google Drive 또는 기기·Google 계정의 백업 설정에서도 직접 확인할 수 있습니다.</li>
+      <li>구매 복원, 환불, 분쟁, 세법 등 회계, 법적 의무와 부정 사용 방지에 필요한 거래 기록(보존기간이 끝나면 삭제 또는 비식별 처리)</li>
+      <li>이메일로 삭제를 요청했거나 앱에서 지우지 못한 iCloud·Google Drive 백업, Android 시스템 백업. iCloud 저장 공간 관리, Google Drive의 앱 관리 메뉴 또는 기기·Google 계정의 백업 설정에서 직접 삭제할 수 있습니다.</li>
+      <li>같은 기기에서 프로모션 코드를 반복 사용하는 것을 막기 위한 최소한의 기기 식별 기록</li>
+      <li>사용자가 직접 내보내기로 저장한 파일</li>
     </ul>
 
     <p class="danger"><strong>중요:</strong> 계정 또는 앱을 삭제해도 App Store나 Google Play의 활성 구독은 취소되지 않습니다. 각 스토어의 구독 관리 화면에서 별도로 취소해야 합니다. 앱을 다시 사용하면 새 익명 계정이 생성될 수 있습니다.</p>
@@ -73,21 +80,26 @@
 
   <section class="card" id="en" lang="en">
     <h2>Delete your account and data</h2>
+    <h3>In the app (version 1.4.9 or later)</h3>
+    <p>Go to Settings → Data Management → “Delete Account &amp; Data” at the bottom and confirm twice. An internet connection is required; if the server deletion fails, nothing on your device is deleted. After the server deletion succeeds, the app also deletes this device's records, settings, scheduled notifications, and the iCloud/Google Drive backup it created, then restarts fresh.</p>
+    <h3>By email (earlier versions, or if you have removed the app)</h3>
+    <p>To delete your anonymous account and server data:</p>
     <ol>
-      <li>Open Tarot Timer.</li>
-      <li>Go to <strong>Settings → Data Management</strong>.</li>
-      <li>Tap <strong>Delete Account and Data</strong>.</li>
-      <li>Complete both confirmation steps.</li>
+      <li>Email <a href="mailto:changsekwon@gmail.com?subject=Tarot%20Timer%20account%20deletion%20request">changsekwon@gmail.com</a> with the subject “Tarot Timer account deletion request.”</li>
+      <li>Include your device type (iPhone, iPad, or Android), roughly when you started using the app, and on Android the device name shown in your device settings. If you ever subscribed, the order number from your store receipt helps us find the account.</li>
+      <li>We may ask for a minimal additional check to identify the account. Do not email your password, full receipt, or card details.</li>
     </ol>
-    <p>If you cannot access the app, email <a href="mailto:changsekwon@gmail.com?subject=Tarot%20Timer%20account%20deletion%20request">changsekwon@gmail.com</a> with the subject “Tarot Timer account deletion request.” We may provide a minimal verification step tied to the device or purchase. Do not email your password or full receipt.</p>
+    <p>We aim to acknowledge requests within two business days and, once the account is identified, delete it within 10 days of receiving the request and confirm by email. If we cannot identify the account from the information provided, we will tell you.</p>
     <h3>Deleted</h3>
-    <p>The anonymous Supabase account, device mapping, synced tarot content, journals, notes, spreads, analytics, notification preferences and token, on-device app data, analytics queue, widget data, app-created export files, and—where technically available—app-created iCloud/Google Drive backup and iOS app identifier.</p>
+    <p>The anonymous Supabase account and device mapping; daily readings, spreads, journals, notes, and settings saved through Cloud Sync; subscription and promo records (except records we must keep by law); push tokens and notification settings; usage statistics; and, on request, your website inquiries.</p>
+    <h3>On your device</h3>
+    <p>Uninstalling the app removes on-device records, settings, widget data, and rewarded-ad rewards. OS-managed identifiers (iOS Keychain/iCloud key-value storage, Android app-scoped ID) may remain after uninstalling. If you use the app again after server deletion, a new anonymous account is created.</p>
     <h3>May be retained</h3>
-    <p>Apple/Google store records; transaction records needed for restoration, refunds, disputes, accounting, law, or fraud prevention; the Android OS-managed app-scoped identifier; and any iCloud, Google Drive, or Android system backup that could not be removed automatically.</p>
+    <p>Apple/Google store records; transaction records needed for restoration, refunds, disputes, tax and accounting, law, or fraud prevention; iCloud or Google Drive backups not removed in the app (for example, after an email request) and Android system backups, which you can delete in those settings; a minimal device record that prevents the same device from reusing a promo code; and files you exported yourself.</p>
     <p class="danger"><strong>Important:</strong> deleting the account or app does not cancel an App Store or Google Play subscription. Cancel it separately in the store. A new anonymous account may be created if you use the app again.</p>
   </section>
 
-  <footer>Last updated: July 23, 2026 · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a></footer>
+  <footer>Last updated: October 11, 2026 · <a href="./privacy.html">Privacy</a> · <a href="./terms.html">Terms</a></footer>
 </main>
 </body>
 </html>
